@@ -1,21 +1,30 @@
 # CI_TSP
 Genetic Algorithms+TSP
 
+# Approach Doubts:
+- Should we save all the fitness (maybe for plots)
+- Should we create a number of offspring and then select between them and the parents
+  - If we do this how do we do it. We need two parents per offspring (maybe select even offspring values). If there's no crossover just keep the values? Doesn't this account too many times for the parents
+- Should we just create offspring and select from there
+
 # To do list
-- [ ] Add a different method apart from elitism
+- [x] Elitism
+- [ ] Plot function
 - [ ] Add hyperparameters:
   - [x] nº of iterations
   - [x] nº of prints (how often we represent the evolution on the fitness of the generations)
 - [x] Add matrix of distances implementation
 - [ ] Add crossover methods (maybe create our own)
 - [ ] Improve computing time
-- [ ] Code parent selsction methods
-  - [ ] tournament
-  - [ ] roulette
+- [ ] Code parent selection methods
+  - [x] tournament
+  - [x] roulette
 - [ ] Code crossover methods
 - [ ] Code mutation methods (?)
 - [ ] Code select survivors methods
 - [ ] Add stagnation convergence (before ending the generations)
+- [ ] AT THE END
+  - [ ] Check function descriptors says all the hyperparameter options
 
 # Optional to do list:
 - [ ] To test if we chose the right parameters we can repeat a certain time the experiments and perform an ANOVA on the different models (this is done in the article [3])
@@ -25,7 +34,7 @@ Genetic Algorithms+TSP
 ## Info for the report
 * We use the **Pittsburgh view**, each individual is a full solution.
 * We assume simmetrical distances (since the data we obtained was that way)
-* experimentally lambda = 7 x mu
+* we choose $(\mu,\lambda)$ with $\mu=\lambda$
 
 ## Selection Methods:
 * Elitism
