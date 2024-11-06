@@ -20,7 +20,11 @@ Genetic Algorithms+TSP
   - [x] roulette
 - [ ] Code crossover methods
   - [x] OX1
-- [ ] Code mutation methods (?)
+  - [x] POS
+- [x] Code mutation methods 
+  - [x] Insertion
+  - [x] Exchange
+  - [x] IVM
 - [ ] Add stagnation convergence (before ending the generations)
 - [ ] AT THE END
   - [ ] Check function descriptors says all the hyperparameter options
