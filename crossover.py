@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 import random
 
 class Crossover:
     def __init__(self, parent1, parent2, number_of_pos):
+=======
+class crossover:
+    def __init__(self, parent1: list[int], parent2: list[int]) -> None:
+>>>>>>> dd876d3 (modular tsp_genetic, switched variable types, testing)
         self.parent1 = parent1
         self.parent2 = parent2
         self.number_of_pos = number_of_pos
@@ -54,6 +59,7 @@ class Crossover:
             offspring1[pos] = self.parent2[pos]
             offspring2[pos] = self.parent1[pos]
 
+<<<<<<< HEAD
         print(offspring1, offspring2)
         
         # Function to fill the remaining positions
@@ -87,6 +93,15 @@ if __name__ == "__main__":
     print("Parent 2:", parent2)
     print("Offspring 1:", offspring1)
     print("Offspring 2:", offspring2)
+=======
+# Usage
+#cross = Crossover([1, 2, 3, 4, 5, 6, 7, 8], [2, 4, 6, 8, 7, 5, 3, 1])
+#print(cross.OX1())
+
+# Or, you can specify the cuts
+#cross = Crossover([1, 2, 3, 4, 5, 6, 7, 8], [2, 4, 6, 8, 7, 5, 3, 1])
+#print(cross.OX1(2, 6))
+>>>>>>> dd876d3 (modular tsp_genetic, switched variable types, testing)
 
     offspring1, offspring2 = cross.OX1(2, 5)
     print("Offspring 1 (OX1):", offspring1)
