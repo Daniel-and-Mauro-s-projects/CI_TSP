@@ -1,0 +1,195 @@
+\documentclass[12pt]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}      % Encoding of the document
+\usepackage{graphicx}            % For including images
+\usepackage{amsmath, amssymb}    % Math packages
+\usepackage{geometry}            % Page layout
+\usepackage{hyperref}            % Hyperlinks
+\usepackage{natbib}              % Bibliography
+\usepackage{caption}             % Custom captions
+\usepackage{subcaption}          % Subfigures
+\usepackage{listings}            % Code listings
+\usepackage{xcolor}              % Colors
+
+% Page Layout
+\geometry{
+    a4paper,
+    left=1in,
+    right=1in,
+    top=1in,
+    bottom=1in,
+}
+
+% Hyperlink setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+% Code Listing Style
+\lstset{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    commentstyle=\color{gray},
+    stringstyle=\color{red},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    stepnumber=1,
+    numbersep=10pt,
+    backgroundcolor=\color{white},
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    frame=single,
+    tabsize=4,
+    captionpos=b,
+    breaklines=true,
+    breakatwhitespace=false,
+    escapeinside={\%*}{*)},
+}
+
+% Title Information
+\title{%
+    \vspace{2in} % Adjust vertical space
+    \textbf{Tackling the Traveling Salesman Problem with Genetic Algorithms}\\
+    \vspace{2in}
+}
+
+\author{
+    Mauro Vázquez Chas \\
+    Dániel Mácsai
+    \vspace{0.2in}
+}
+
+\date{2024. 11. 10}
+
+\begin{document}
+
+% Title Page
+\maketitle
+\thispagestyle{empty}
+
+% Abstract
+\begin{abstract}
+    \noindent
+    Abstract goes here.
+\end{abstract}
+
+\newpage
+
+\tableofcontents
+\newpage
+
+
+\section{Introduction}
+
+\subsection{Problem setup}
+
+\subsection{Background}
+Provide background information on the topic, including relevant literature and the motivation behind the project.
+
+\subsection{Objectives and scope}
+Outline the main objectives and goals of the project. Define the scope and limitations of the study.
+
+\section{Methodology}
+\subsection{An overview on Genetic Algorithms}
+Explain the basics of genetic algorithms, including selection, crossover, and mutation.
+
+\subsection{Crossover techniques}
+Describe the POS operator, its implementation, and its role in the genetic algorithm.
+
+\subsection{Mutation Operators}
+Detail the mutation operators used, such as Exchange, Insertion, and Inversion Mutation (IVM).
+
+% Implementation
+\section{Implementation}
+\subsection{Environment Setup}
+Describe the tools, libraries, and environment used for the implementation.
+
+\subsection{Code Structure}
+Provide an overview of the code structure, including key modules and their functionalities.
+
+\subsection{Key Algorithms}
+Include code snippets and explanations of the core algorithms implemented.
+
+\subsubsection{Position-Based Crossover}
+\begin{lstlisting}[caption=Position-Based Crossover Implementation]
+import random
+
+class Crossover:
+    def __init__(self, parent1, parent2, number_of_pos):
+        self.parent1 = parent1
+        self.parent2 = parent2
+        self.number_of_pos = number_of_pos
+
+    def POS(self) -> tuple[list[int], list[int]]:
+        # Select random positions for the subset
+        positions = random.sample(range(len(self.parent1)), self.number_of_pos)
+        
+        # Initialize offspring with None
+        offspring1 = [None] * len(self.parent1)
+        offspring2 = [None] * len(self.parent2)
+        
+        # Copy the selected positions from parents
+        for pos in positions:
+            offspring1[pos] = self.parent2[pos]
+            offspring2[pos] = self.parent1[pos]
+        
+        # Function to fill the remaining positions
+        def fill_offspring(offspring, parent):
+            current_index = 0
+            for city in parent:
+                if city not in offspring:
+                    while current_index < len(offspring) and offspring[current_index] is not None:
+                        current_index += 1
+                    if current_index < len(offspring):
+                        offspring[current_index] = city
+            return offspring
+        
+        # Fill the remaining positions for both offspring
+        offspring1 = fill_offspring(offspring1, self.parent1)
+        offspring2 = fill_offspring(offspring2, self.parent2)
+        
+        return offspring1, offspring2
+\end{lstlisting}
+
+% Results
+\section{Results}
+\subsection{Experimental Setup}
+Describe the experiments conducted, including parameters and datasets used.
+
+\subsection{Performance Analysis}
+Present and analyze the results, using figures and tables as necessary.
+
+\subsection{Discussion}
+Interpret the results, discussing their implications and any observed patterns.
+
+% Conclusion
+\section{Conclusion}
+\subsection{Summary}
+Summarize the key findings and contributions of the project.
+
+\subsection{Future Work}
+Suggest potential areas for future research or improvements.
+
+% References
+\begin{thebibliography}{9}
+\bibitem{ref1}
+Author Name, \textit{Title of the Book/Paper}, Journal/Publisher, Year.
+
+\bibitem{ref2}
+Author Name, \textit{Title of the Book/Paper}, Journal/Publisher, Year.
+
+% Add more references as needed
+\end{thebibliography}
+
+% Appendix
+\appendix
+\chapter{Appendix A}
+Include any supplementary material, such as additional code or data.
+
+\end{document}
