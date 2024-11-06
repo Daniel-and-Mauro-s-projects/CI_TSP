@@ -14,14 +14,13 @@ Genetic Algorithms+TSP
   - [x] nº of iterations
   - [x] nº of prints (how often we represent the evolution on the fitness of the generations)
 - [x] Add matrix of distances implementation
-- [ ] Add crossover methods (maybe create our own)
 - [ ] Improve computing time
 - [ ] Code parent selection methods
   - [x] tournament
   - [x] roulette
 - [ ] Code crossover methods
+  - [x] OX1
 - [ ] Code mutation methods (?)
-- [ ] Code select survivors methods
 - [ ] Add stagnation convergence (before ending the generations)
 - [ ] AT THE END
   - [ ] Check function descriptors says all the hyperparameter options
