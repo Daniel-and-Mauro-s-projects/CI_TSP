@@ -18,7 +18,7 @@ Genetic Algorithms+TSP
 - [ ] Code parent selection methods
   - [x] tournament
   - [x] roulette
-- [ ] Code crossover methods
+- [x] Code crossover methods
   - [x] OX1
   - [x] POS
 - [x] Code mutation methods 
