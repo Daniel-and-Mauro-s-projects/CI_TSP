@@ -1,6 +1,6 @@
 import random
 
-class Crossover:
+class crossover:
     def __init__(self, parent1: list[int], parent2: list[int], number_of_pos: int) -> None:
         self.parent1 = parent1
         self.parent2 = parent2
@@ -43,7 +43,7 @@ class Crossover:
         '''
         # Select random positions for the subset
         positions = random.sample(range(len(self.parent1)), self.number_of_pos)
-        print(positions)
+        #print(positions) # Debugging
         
         # Initialize offspring with None
         offspring1 = [None] * len(self.parent1)
@@ -54,7 +54,7 @@ class Crossover:
             offspring1[pos] = self.parent2[pos]
             offspring2[pos] = self.parent1[pos]
 
-        print(offspring1, offspring2)
+        # print(offspring1, offspring2) # debugging
         
         # Function to fill the remaining positions
         def fill_offspring(offspring, parent):

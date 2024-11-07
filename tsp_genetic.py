@@ -7,6 +7,8 @@ from parent_selection import parent_selection as ps
 from mutation import mutation as mu
 from crossover import crossover as cr
 
+logging.basicConfig(level=logging.INFO)
+
 class TSP_Genetic:
     """Perform a Genetic Algorithm simulation for the TSP problem"""
 
@@ -19,6 +21,7 @@ class TSP_Genetic:
         select_parents: str="tournament_selection",
         tournament_size: int=3,
         crossover: str="OX1",
+        crossover_call:str ="(4, cities.shape[0] - 4)",
         mutation: str="insertion",
         elitism: int=0
     ):
@@ -32,6 +35,7 @@ class TSP_Genetic:
                 select_parents: The method to select parents for crossover. Options are 'tournament_selection' and 'roulette_selection' (Default: 'tournament').
                 tournament_size: The size of the tournament for tournament selection (Default: 3).
                 crossover: The method to perform crossover between parent chromosomes.
+                crossover_call: The arguments to pass to the crossover method.
                 mutation: The method to perform mutation in offspring chromosomes.
                 elitism: The number of best chromosomes to keep in the next generation (Default: 0).
         """
@@ -44,6 +48,7 @@ class TSP_Genetic:
         self.select_parents = select_parents
         self.tournament_size = tournament_size
         self.crossover = crossover
+        self.crossover_call = crossover_call
         self.mutation = mutation
         self.elitism = int(elitism)
 
@@ -75,14 +80,14 @@ class TSP_Genetic:
                 z: The chromosome to plot.
         """
         # Plot the cities
-        plt.plot(self.cities[:,0],self.cities[:,1],'o-')
+        plt.plot(self.cities[:,0],self.cities[:,1],'o')
         for (x, y), label in zip(self.cities, [str(i) for i in range(1, self.n_cities+1)]):
             plt.text(x, y + 0.1, label, ha='center', va='bottom')
 
         # Plot the route
         for i in range(len(z)-1):
             plt.plot([self.cities[z[i],0],self.cities[z[i+1],0]],[self.cities[z[i],1],self.cities[z[i+1],1]],'r-')
-
+        plt.plot([self.cities[z[len(z)-1],0],self.cities[z[0],0]],[self.cities[z[len(z)-1],1],self.cities[z[0],1]],'r-')
         plt.show()
 
 
@@ -126,7 +131,8 @@ class TSP_Genetic:
                 #Crossover
                 if random.random() < self.c_rate:
                     # Generate offspring
-                    child1, child2 = getattr(cr(parent1,parent2), self.crossover)()
+                    cross_method= getattr(cr(parent1,parent2,self.n_cities), self.crossover)
+                    child1, child2 = eval(f"cross_method{self.crossover_call}")
                 else:
                     child1, child2 = parent1, parent2
 
@@ -137,12 +143,15 @@ class TSP_Genetic:
                 if random.random() < self.m_rate:
                     child2 = getattr(mu,self.mutation)(child2)
 
-                offspring.append(child1,child2)
+                offspring.append(child1)
+                offspring.append(child2)
 
-            population = np.array(offspring)
+            self.population = np.array(offspring)
             # Print progress
-            if generation-1 % self.print_rate == 0:
-                logging.INFO(f"Generation {generation} - Best cromosome: {population[np.argmin(fitness)]}, Best fitness: {np.min(fitness)}")
-                self.plot_route(population[np.argmin(fitness)])
+            if generation % self.print_rate == 0:
+                logging.info(f"Generation {generation} - Best cromosome: {self.population[int(np.argmin(fitness))]}, Best fitness: {np.min(fitness)}")
+                self.plot_route(self.population[int(np.argmin(fitness))])
+        # Get the best chromosome
+        logging.info(f"Generation {generation} - Best cromosome: {self.population[int(np.argmin(fitness))]}, Best fitness: {np.min(fitness)}")
         
         return self.population[0]

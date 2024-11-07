@@ -1,10 +1,10 @@
 import random
 import numpy as np
 
-class Mutation:
+class mutation:
 
     @staticmethod
-    def Exchange(path):
+    def exchange(path):
         ''' This method picks two random cities and switches them.'''
         i, j = random.sample(range(len(path)), 2)
         # We invert the order of the cities in positions i and j
@@ -12,7 +12,7 @@ class Mutation:
         return path
 
     @staticmethod
-    def Insertion(path):
+    def insertion(path):
         ''' This method picks a random city and moves it to a random position.'''
         i, j = random.sample(range(len(path)), 2)
         # We move city in position i to position j
