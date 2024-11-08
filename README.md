@@ -35,6 +35,7 @@ Genetic Algorithms+TSP
 - [ ] AT THE END
   - [ ] Check function descriptors says all the hyperparameter options
   - [ ] Talk about the optional parameters of the methods we implemented but didn't tested
+  - [ ] We used the distance function and we wanted to minimize it, acting as a sort of cost function. If the objective were to be the usage of a fitness function, we could apply a monotonic descending transformation to the distance, such as $e^{-x}$
 
 # Optional to do list:
 - [ ] To test if we chose the right parameters we can repeat a certain time the experiments and perform an ANOVA on the different models (this is done in the article [3])

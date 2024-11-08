@@ -3,9 +3,9 @@ import random
 import matplotlib.pyplot as plt
 import logging
 
-from parent_selection import parent_selection as ps
-from mutation import mutation as mu
-from crossover import crossover as cr
+from src.parent_selection import parent_selection as ps
+from src.mutation import mutation as mu
+from src.crossover import crossover as cr
 
 import json
 import os
@@ -28,7 +28,7 @@ class TSP_Genetic:
         crossover_call:str ="(4, cities.shape[0] - 4)",
         mutation: str="insertion",
         elitism: int=0,
-        results_path: str = "fitness_statistics.json",
+        results_path: str = "results/path_distance_statistics.json",
         save_results: bool = 0
     ):
         """Initialize the Genetic Algorithm simulation for the TSP problem.
@@ -44,8 +44,8 @@ class TSP_Genetic:
                 crossover_call: The arguments to pass to the crossover method.
                 mutation: The method to perform mutation in offspring chromosomes.
                 elitism: The number of best chromosomes to keep in the next generation (Default: 0).
-                results_path: The path to save the fitness statistics. (default: "fitness_statistics.json")
-                save_results: Whether to save the fitness statistics to a file. (default: False)
+                results_path: The path to save the path_distance statistics. (default: "path_distance_statistics.json")
+                save_results: Whether to save the path_distance statistics to a file. (default: False)
         """
         self.generations = generations
         self.print_results = print_results
@@ -63,27 +63,27 @@ class TSP_Genetic:
         self.mutation = mutation
         self.elitism = int(elitism)
 
-    def _fitness(self,x):
-        """Calculate the fitness of a chromosome x for the TSP problem.
+    def _path_distance(self,x):
+        """Calculate the path_distance of a chromosome x for the TSP problem.
             Args:
                 x: The chromosome to evaluate.
             Returns:
-                The fitness of the chromosome.
+                The path_distance of the chromosome.
         """
-        fitness = 0
+        path_distance = 0
         for i in range(len(x)-1):
-            fitness += self.distances[x[i],x[i+1]]
-        fitness += self.distances[x[-1],x[0]]
-        return fitness
+            path_distance += self.distances[x[i],x[i+1]]
+        path_distance += self.distances[x[-1],x[0]]
+        return path_distance
     
-    def fitness_population(self,population):
-        """Calculate the fitness of a population of chromosomes for the TSP problem.
+    def path_distance_population(self,population):
+        """Calculate the path_distance of a population of chromosomes for the TSP problem.
             Args:
                 population: The population to evaluate.
             Returns:
-                The fitness of each chromosome in the population.
+                The path_distance of each chromosome in the population.
         """
-        return np.array([self._fitness(x) for x in population])
+        return np.array([self._path_distance(x) for x in population])
     
     def plot_route(self,z):
         """Plot the route of a chromosome z for the TSP problem.
@@ -110,7 +110,7 @@ class TSP_Genetic:
                 distances: A matrix representing the distances between each pair of cities.
 
             Returns:
-                The best chromosome found and its fitness.
+                The best chromosome found and its path_distance.
         """
         self.population = population
         self.population_size = len(self.population)
@@ -127,23 +127,23 @@ class TSP_Genetic:
             self.population_size += 1
 
         for generation in range(self.generations):
-            # Get fitness of a population
-            fitness = self.fitness_population(self.population)
+            # Get path_distance of a population
+            path_distance = self.path_distance_population(self.population)
             offspring = []
             #Elitism
             if self.elitism > 0:
-                for indx in np.argsort(fitness)[:self.elitism]:
+                for indx in np.argsort(path_distance)[:self.elitism]:
                     offspring.append(self.population[indx])
             
             # Generate offspring:
             for i in range(int((self.population_size-self.elitism)/2)):
                 # Select parents
                 if self.select_parents == "tournament_selection":
-                    parent1 = ps.tournament_selection(self.population,fitness,self.tournament_size)
-                    parent2 = ps.tournament_selection(self.population,fitness,self.tournament_size)
+                    parent1 = ps.tournament_selection(self.population,path_distance,self.tournament_size)
+                    parent2 = ps.tournament_selection(self.population,path_distance,self.tournament_size)
                 else:
-                    parent1 = getattr(ps, self.select_parents)(self.population,fitness)
-                    parent2 = getattr(ps, self.select_parents)(self.population,fitness)
+                    parent1 = getattr(ps, self.select_parents)(self.population,path_distance)
+                    parent2 = getattr(ps, self.select_parents)(self.population,path_distance)
                 
                 #Crossover
                 if random.random() < self.c_rate:
@@ -166,10 +166,10 @@ class TSP_Genetic:
                 # Compute the metrics
                 generation_data = {
                     generation: {
-                        "mean_fitness": np.mean(fitness),
-                        "median_fitness": np.median(fitness),
-                        "min_fitness": np.min(fitness),
-                        "max_fitness": np.max(fitness)
+                        "mean_path_distance": np.mean(path_distance),
+                        "median_path_distance": np.median(path_distance),
+                        "min_path_distance": np.min(path_distance),
+                        "max_path_distance": np.max(path_distance)
                     }
                 }
 
@@ -181,15 +181,17 @@ class TSP_Genetic:
             if self.print_results:
                 # Print progress
                 if generation % self.print_rate == 0:
-                    logging.info(f"Generation {generation} - Best cromosome: {self.population[int(np.argmin(fitness))]}, Best fitness: {np.min(fitness)}")
-                    self.plot_route(self.population[int(np.argmin(fitness))])
+                    logging.info(f"Generation {generation} - Best cromosome: {self.population[int(np.argmin(path_distance))]}, Best path_distance: {np.min(path_distance)}")
+                    self.plot_route(self.population[int(np.argmin(path_distance))])
+        
+        best_chromosome = self.population[int(np.argmin(path_distance))]
         # Get the best chromosome
         if self.print_results:
-            logging.info(f"Generation {generation} - Best cromosome: {self.population[int(np.argmin(fitness))]}, Best fitness: {np.min(fitness)}")
+            logging.info(f"Generation {generation} - Best cromosome: {best_chromosome}, Best path_distance: {np.min(path_distance)}")
         
         # Save the results
         if self.save_results:
             with open(self.results_path, "w") as f:
                 json.dump(data, f)
 
-        return self.population[0] , np.min(fitness)
+        return best_chromosome , np.min(path_distance)

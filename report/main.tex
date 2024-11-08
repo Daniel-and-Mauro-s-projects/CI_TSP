@@ -11,6 +11,10 @@
 \usepackage{subcaption}          % Subfigures
 \usepackage{listings}            % Code listings
 \usepackage{xcolor}              % Colors
+\usepackage{biblatex}
+
+% Bibliography file:
+\addbibresource{bibliography.bib}
 
 % To count pages after the index:
 \pagenumbering{gobble}
@@ -181,15 +185,8 @@ Summarize the key findings and contributions of the project.
 Suggest potential areas for future research or improvements.
 
 % References
-\begin{thebibliography}{9}
-\bibitem{ref1}
-Author Name, \textit{Title of the Book/Paper}, Journal/Publisher, Year.
-
-\bibitem{ref2}
-Author Name, \textit{Title of the Book/Paper}, Journal/Publisher, Year.
-
-% Add more references as needed
-\end{thebibliography}
+\newpage
+\printbibliography
 
 % Appendix
 \appendix
