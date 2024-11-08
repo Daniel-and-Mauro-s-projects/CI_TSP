@@ -7,6 +7,9 @@ from parent_selection import parent_selection as ps
 from mutation import mutation as mu
 from crossover import crossover as cr
 
+import json
+import os
+
 logging.basicConfig(level=logging.INFO)
 
 class TSP_Genetic:
@@ -15,6 +18,7 @@ class TSP_Genetic:
     def __init__(
         self,
         generations: int=100,
+        print_results: bool=False,
         print_rate: int=10,
         m_rate: float=0.05,
         c_rate: float=0.8,
@@ -23,12 +27,14 @@ class TSP_Genetic:
         crossover: str="OX1",
         crossover_call:str ="(4, cities.shape[0] - 4)",
         mutation: str="insertion",
-        elitism: int=0
+        elitism: int=0,
+        results_path: str = "fitness_statistics.json",
+        save_results: bool = 0
     ):
-
         """Initialize the Genetic Algorithm simulation for the TSP problem.
             Args:
                 generations: The number of generations to simulate in the genetic algorithm (100 by default).
+                print_results: Whether to print the results of the algorithm (default: False).
                 print_rate: How often to print the progress of the algorithm (Default: every 10 generations).
                 m_rate: The mutation rate, representing the probability of mutation in offspring (Default: 0.05).
                 c_rate: The crossover rate, representing the probability of crossover between parent chromosomes (Default: 0.8).
@@ -38,9 +44,14 @@ class TSP_Genetic:
                 crossover_call: The arguments to pass to the crossover method.
                 mutation: The method to perform mutation in offspring chromosomes.
                 elitism: The number of best chromosomes to keep in the next generation (Default: 0).
+                results_path: The path to save the fitness statistics. (default: "fitness_statistics.json")
+                save_results: Whether to save the fitness statistics to a file. (default: False)
         """
         self.generations = generations
+        self.print_results = print_results
         self.print_rate = print_rate
+        self.results_path = results_path
+        self.save_results = save_results
 
         self.m_rate = m_rate
         self.c_rate = c_rate
@@ -104,6 +115,9 @@ class TSP_Genetic:
         self.n_cities = self.cities.shape[0]
         self.distances = np.array(distances)
 
+        # We create a variable to save the metrics
+        data = []
+
         # We need population_size-elitism to be even
         if (self.population_size-self.elitism) % 2 != 0:
             logging.warning("Population size - elitism is not even. Adding one to population size.")
@@ -146,12 +160,34 @@ class TSP_Genetic:
                 offspring.append(child1)
                 offspring.append(child2)
 
+            if self.save_results:
+                # Compute the metrics
+                generation_data = {
+                    generation: {
+                        "mean_fitness": np.mean(fitness),
+                        "median_fitness": np.median(fitness),
+                        "min_fitness": np.min(fitness),
+                        "max_fitness": np.max(fitness)
+                    }
+                }
+
+                # Append the current generation data
+                data.append(generation_data)
+
             self.population = np.array(offspring)
-            # Print progress
-            if generation % self.print_rate == 0:
-                logging.info(f"Generation {generation} - Best cromosome: {self.population[int(np.argmin(fitness))]}, Best fitness: {np.min(fitness)}")
-                self.plot_route(self.population[int(np.argmin(fitness))])
+
+            if self.print_results:
+                # Print progress
+                if generation % self.print_rate == 0:
+                    logging.info(f"Generation {generation} - Best cromosome: {self.population[int(np.argmin(fitness))]}, Best fitness: {np.min(fitness)}")
+                    self.plot_route(self.population[int(np.argmin(fitness))])
         # Get the best chromosome
-        logging.info(f"Generation {generation} - Best cromosome: {self.population[int(np.argmin(fitness))]}, Best fitness: {np.min(fitness)}")
+        if self.print_results:
+            logging.info(f"Generation {generation} - Best cromosome: {self.population[int(np.argmin(fitness))]}, Best fitness: {np.min(fitness)}")
         
+        # Save the results
+        if self.save_results:
+            with open(self.results_path, "w") as f:
+                json.dump(data, f)
+
         return self.population[0]
