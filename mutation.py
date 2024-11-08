@@ -16,7 +16,7 @@ class mutation:
         ''' This method picks a random city and moves it to a random position.'''
         i, j = random.sample(range(len(path)), 2)
         # We move city in position i to position j
-        path.insert(j, path.pop(i)) # pop(i) removes the element at position i and returns it
+        path=np.insert(np.delete(path,i), j, path[i]) 
         return path
 
     @staticmethod
@@ -35,11 +35,12 @@ class mutation:
         
         # Extract the subset
         subset = path[cut:cut + length]
-        del path[cut:cut + length]
-        subset.reverse()
+        path = np.delete(path,list(range(cut,cut + length)))
+        # We reverse the subset
+        subset=subset[::-1]
 
         # Insert the reversed subset back into the path
         new_index = random.randint(0, len(path))  
-        path[new_index:new_index] = subset
+        path=np.insert(path, new_index, subset)
 
         return path

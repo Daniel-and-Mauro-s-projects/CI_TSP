@@ -108,6 +108,9 @@ class TSP_Genetic:
                 population: The initial population of chromosomes (list of lists).
                 cities: The list of positions of each city. A row represents a city and the first element its x coordinate and the second its y coordinate.
                 distances: A matrix representing the distances between each pair of cities.
+
+            Returns:
+                The best chromosome found and its fitness.
         """
         self.population = population
         self.population_size = len(self.population)
@@ -151,7 +154,6 @@ class TSP_Genetic:
                     child1, child2 = parent1, parent2
 
                 # Mutate offspring
-                # TODO: Write the mutation function
                 if random.random() < self.m_rate:
                     child1 = getattr(mu,self.mutation)(child1)
                 if random.random() < self.m_rate:
@@ -190,4 +192,4 @@ class TSP_Genetic:
             with open(self.results_path, "w") as f:
                 json.dump(data, f)
 
-        return self.population[0]
+        return self.population[0] , np.min(fitness)

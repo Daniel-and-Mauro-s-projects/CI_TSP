@@ -8,7 +8,10 @@ Genetic Algorithms+TSP
 - Should we just create offspring and select from there
 
 # To do list
+- [ ] IMPORTANT: fitness function currently is distance which is more like a cost function (we want to minimize it), solve this. For example in roulette it doesn't make sense because we reward big distances. 
+  - [x] Maybe we could do fitness = 1/distance
 - [x] Elitism
+- [ ] Write about the configuration of hypereparameters we decided not to do
 - [ ] Plot function
 - [ ] Add hyperparameters:
   - [x] nº of iterations
@@ -18,6 +21,9 @@ Genetic Algorithms+TSP
 - [ ] Code parent selection methods
   - [x] tournament
   - [x] roulette
+  - [x] rank roulette
+    - in rank roulette, in order to select the weights, we considered two options: 1) Using the reciprocal of the rank as the weight 2) using the ranks in inverse order and normalize (so the 1st would get 29/norm and the last would get 1/norm). In the end we ran a little experiment and we chose the 1) 
+  - [x] random
 - [x] Code crossover methods
   - [x] OX1
   - [x] POS
@@ -25,9 +31,10 @@ Genetic Algorithms+TSP
   - [x] Insertion
   - [x] Exchange
   - [x] IVM
-- [ ] Add stagnation convergence (before ending the generations)
+- [] Add stagnation convergence (before ending the generations) WE DECIDED NOT TO DO IT, BECAUSE IT NEGLECT THE EFFECT OF GENERATIONS and COMMENT ON THE PLOTS IF IT WOULD BE USEFUL
 - [ ] AT THE END
   - [ ] Check function descriptors says all the hyperparameter options
+  - [ ] Talk about the optional parameters of the methods we implemented but didn't tested
 
 # Optional to do list:
 - [ ] To test if we chose the right parameters we can repeat a certain time the experiments and perform an ANOVA on the different models (this is done in the article [3])
