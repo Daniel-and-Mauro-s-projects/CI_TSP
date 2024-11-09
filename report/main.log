@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.24)  10 NOV 2024 00:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.24)  10 NOV 2024 00:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1341,78 +1341,89 @@ Package wrapfig Warning: Stationary wrapfigure forced to float on input line 38
 6.
 
 
-Package wrapfig Warning: Stationary wrapfigure forced to float on input line 39
-2.
+Package wrapfig Warning: Stationary wrapfigure forced to float on input line 38
+9.
 
 [7 <../results/best_chromosme.png>]
 <../results/population_size_boxplot.png, id=285, 722.7pt x 433.62pt>
 File: ../results/population_size_boxplot.png Graphic file (type png)
 <use ../results/population_size_boxplot.png>
 Package pdftex.def Info: ../results/population_size_boxplot.png  used on input 
-line 412.
+line 409.
 (pdftex.def)             Requested size: 234.76729pt x 140.85866pt.
 <../results/generations_boxplot.png, id=286, 722.7pt x 433.62pt>
 File: ../results/generations_boxplot.png Graphic file (type png)
 <use ../results/generations_boxplot.png>
 Package pdftex.def Info: ../results/generations_boxplot.png  used on input line
- 416.
+ 413.
 (pdftex.def)             Requested size: 234.76729pt x 140.85866pt.
 <../results/mutation_rate_boxplot.png, id=287, 722.7pt x 433.62pt>
 File: ../results/mutation_rate_boxplot.png Graphic file (type png)
 <use ../results/mutation_rate_boxplot.png>
 Package pdftex.def Info: ../results/mutation_rate_boxplot.png  used on input li
-ne 426.
+ne 423.
 (pdftex.def)             Requested size: 234.76729pt x 140.85866pt.
 <../results/crossover_rate_boxplot.png, id=288, 722.7pt x 433.62pt>
 File: ../results/crossover_rate_boxplot.png Graphic file (type png)
 <use ../results/crossover_rate_boxplot.png>
 Package pdftex.def Info: ../results/crossover_rate_boxplot.png  used on input l
-ine 430.
+ine 427.
 (pdftex.def)             Requested size: 234.76729pt x 140.85866pt.
- [8 <../results/population_size_boxplot.png> <../results/generations_boxplot.pn
-g> <../results/mutation_rate_boxplot.png> <../results/crossover_rate_boxplot.pn
-g>]
-<../results/crossover_method_boxplot.png, id=300, 722.7pt x 433.62pt>
-File: ../results/crossover_method_boxplot.png Graphic file (type png)
-<use ../results/crossover_method_boxplot.png>
-Package pdftex.def Info: ../results/crossover_method_boxplot.png  used on input
- line 442.
-(pdftex.def)             Requested size: 234.76729pt x 140.85866pt.
-<../results/mutation_method_boxplot.png, id=301, 722.7pt x 433.62pt>
-File: ../results/mutation_method_boxplot.png Graphic file (type png)
-<use ../results/mutation_method_boxplot.png>
-Package pdftex.def Info: ../results/mutation_method_boxplot.png  used on input 
-line 446.
-(pdftex.def)             Requested size: 234.76729pt x 140.85866pt.
-<../results/parent_selection_method_boxplot.png, id=302, 1011.78pt x 433.62pt>
+<../results/parent_selection_method_boxplot.png, id=289, 1011.78pt x 433.62pt>
 File: ../results/parent_selection_method_boxplot.png Graphic file (type png)
 <use ../results/parent_selection_method_boxplot.png>
 Package pdftex.def Info: ../results/parent_selection_method_boxplot.png  used o
-n input line 452.
+n input line 434.
 (pdftex.def)             Requested size: 489.10287pt x 209.61732pt.
-<../results/elitism_boxplot.png, id=303, 722.7pt x 433.62pt>
+<../results/elitism_boxplot.png, id=290, 722.7pt x 433.62pt>
 File: ../results/elitism_boxplot.png Graphic file (type png)
 <use ../results/elitism_boxplot.png>
-Package pdftex.def Info: ../results/elitism_boxplot.png  used on input line 459
+Package pdftex.def Info: ../results/elitism_boxplot.png  used on input line 439
 .
 (pdftex.def)             Requested size: 391.28378pt x 234.77325pt.
- [9 <../results/parent_selection_method_boxplot.png> <../results/crossover_meth
-od_boxplot.png> <../results/mutation_method_boxplot.png>] [10 <../results/eliti
-sm_boxplot.png>]
-Overfull \hbox (10.83301pt too wide) in paragraph at lines 485--485
+ [8 <../results/population_size_boxplot.png> <../results/generations_boxplot.pn
+g> <../results/mutation_rate_boxplot.png> <../results/crossover_rate_boxplot.pn
+g>] [9 <../results/parent_selection_method_boxplot.png> <../results/elitism_box
+plot.png>]
+<../results/crossover_method_boxplot.png, id=310, 722.7pt x 433.62pt>
+File: ../results/crossover_method_boxplot.png Graphic file (type png)
+<use ../results/crossover_method_boxplot.png>
+Package pdftex.def Info: ../results/crossover_method_boxplot.png  used on input
+ line 454.
+(pdftex.def)             Requested size: 234.76729pt x 140.85866pt.
+<../results/mutation_method_boxplot.png, id=311, 722.7pt x 433.62pt>
+File: ../results/mutation_method_boxplot.png Graphic file (type png)
+<use ../results/mutation_method_boxplot.png>
+Package pdftex.def Info: ../results/mutation_method_boxplot.png  used on input 
+line 458.
+(pdftex.def)             Requested size: 234.76729pt x 140.85866pt.
+File: ../results/parent_selection_method_boxplot.png Graphic file (type png)
+<use ../results/parent_selection_method_boxplot.png>
+Package pdftex.def Info: ../results/parent_selection_method_boxplot.png  used o
+n input line 467.
+(pdftex.def)             Requested size: 489.10287pt x 209.61732pt.
+ [10 <../results/crossover_method_boxplot.png> <../results/mutation_method_boxp
+lot.png>]
+File: ../results/elitism_boxplot.png Graphic file (type png)
+<use ../results/elitism_boxplot.png>
+Package pdftex.def Info: ../results/elitism_boxplot.png  used on input line 474
+.
+(pdftex.def)             Requested size: 391.28378pt x 234.77325pt.
+ [11]
+Overfull \hbox (10.83301pt too wide) in paragraph at lines 497--497
 []\OT1/cmr/m/n/10.95 Thomas B^^?ack, David Fo-gel, and Zbig-niew Michalewicz. \
 OT1/cmr/m/it/10.95 Evo-lu-tion-ary Com-pu-ta-tion 2---Advanced
  []
 
-[11] [12]
+[12] [13]
 
-! LaTeX Error: \begin{itemize} on input line 478 ended by \end{document}.
+! LaTeX Error: \begin{itemize} on input line 490 ended by \end{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.559 \end{document}
+l.571 \end{document}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1433,38 +1444,46 @@ Package rerunfilecheck Warning: File `main.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 5E961BBC2B1483500392FEC91820C2A0;5164
-(rerunfilecheck)             After:  E6477854F161BCA9F9B3C3067F5641DC;5240.
+(rerunfilecheck)             Before: E6477854F161BCA9F9B3C3067F5641DC;5240
+(rerunfilecheck)             After:  CF6BAAF128D73B8F56B89BF73CAE4B73;5031.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  )
 (\end occurred inside a group at level 1)
 
-### semi simple group (level 1) entered at line 478 (\begingroup)
+### semi simple group (level 1) entered at line 490 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 41496 strings out of 474222
- 926210 string characters out of 5748732
+ 41499 strings out of 474222
+ 926251 string characters out of 5748732
  1939975 words of memory out of 5000000
  63095 multiletter control sequences out of 15000+600000
  567552 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,8n,87p,1190b,1335s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf/fonts/type1/public/cm
--super/sfrm1095.pfb>
-Output written on main.pdf (14 pages, 353476 bytes).
+ 84i,9n,87p,1190b,1335s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{subsection.5.3} has been referenced but does not ex
+ist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.5.2} has been referenced but does not ex
+ist, replaced by a fixed one
+
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmtt10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.
+pfb>
+Output written on main.pdf (15 pages, 355228 bytes).
 PDF statistics:
- 400 PDF objects out of 1000 (max. 8388607)
- 342 compressed objects within 4 object streams
- 93 named destinations out of 1000 (max. 500000)
+ 406 PDF objects out of 1000 (max. 8388607)
+ 347 compressed objects within 4 object streams
+ 96 named destinations out of 1000 (max. 500000)
  338 words of extra memory for PDF output out of 10000 (max. 10000000)
 
