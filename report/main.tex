@@ -107,9 +107,33 @@ The Traveling Salesman Problem (TSP) is a classic combinatorial optimization pro
 TODO: Provide background information on the topic, including relevant literature and the motivation behind the project.
 
 \subsection{Objectives and scope}
-TODO: Outline the main objectives and goals of the project. Define the scope and limitations of the study.
+\section{Objectives and Scope}
 
+\subsection{Objectives}
 
+The primary objective of this research is to investigate the effectiveness of Genetic Algorithms (GAs) in solving the Traveling Salesman Problem (TSP) and to identify optimal parameter configurations that lead to improved performance. Specifically, we aim to:
+
+\begin{enumerate}
+    \item \textbf{Implement} a GA framework to solve the TSP.
+    \item \textbf{Experiment} with different genetic operators (crossover and mutation) and parent selection methods.
+    \item \textbf{Tune} hyperparameters to optimize the GA's performance.
+    \item \textbf{Evaluate} the performance of the GA on a benchmark TSP dataset.
+    \item \textbf{Analyze} the impact of different parameter configurations on the solution quality and computational cost.
+\end{enumerate}
+
+\subsection{Scope}
+
+The scope of this research is limited to the application of GAs to the TSP. We will focus on the following aspects:
+
+\begin{itemize}
+    \item \textbf{Problem Representation}: We will use a permutation-based representation to encode TSP solutions.
+    \item \textbf{Genetic Operators}: We will implement and evaluate the performance of various crossover (e.g., Position-based Crossover, Order-based Crossover) and mutation (e.g., exchange mutation, insertion mutation, inversion mutation) operators.
+    \item \textbf{Parent Selection}: We will explore different parent selection techniques, including random selection, roulette wheel selection, rank-based selection, and tournament selection.
+    \item \textbf{Hyperparameter Tuning}: We will conduct experiments to determine the optimal values for hyperparameters such as population size, mutation rate, crossover rate, and number of generations.
+    \item \textbf{Performance Evaluation}: We will evaluate the performance of the GA using the quality of the solutions obtained. 
+\end{itemize}
+
+We will not delve into more complex variations of the TSP, such as the Vehicle Routing Problem or the Capacitated Vehicle Routing Problem. Additionally, we will not explore other metaheuristic algorithms or hybrid approaches that combine GAs with other techniques.
 
 %%%%%%%%%%%%%%%%%%%
 \section{Methodology}
