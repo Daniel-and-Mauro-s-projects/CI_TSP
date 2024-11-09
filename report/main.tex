@@ -91,7 +91,7 @@
 % Abstract
 \begin{abstract}
     \noindent
-    This paper presents a genetic algorithm approach to solve the Traveling Salesman Problem (TSP). The implementation focuses on key aspects of genetic algorithms, including problem representation, parent selection methods (tournament, roulette, rank-based, and random), crossover techniques (Position-based Crossover and Order-based Crossover), and mutation operators (exchange, insertion, and inversion). The algorithm was evaluated on a standard TSP dataset (bays29.tsp) using a grid search to optimize hyperparameters. The results demonstrate the effectiveness of the genetic algorithm in finding near-optimal solutions to the TSP, with a best solution within 1.73\% of the optimal known solution. The analysis of hyperparameters reveals the importance of elitism and the robustness of the algorithm to different crossover and mutation techniques.
+    This paper presents a genetic algorithm approach to solve the Traveling Salesman Problem (TSP). The implementation focuses on key aspects of genetic algorithms, including problem representation, parent selection methods (tournament, roulette, rank-based, and random), crossover techniques (Position-based Crossover and Order-based Crossover), and mutation operators (exchange, insertion, and inversion). The algorithm was evaluated on a standard TSP dataset (bays29.tsp) using a grid search to optimize hyperparameters. The results show the effectiveness of the genetic algorithm in finding near-optimal solutions to the TSP, with a best solution within 1.73\% of the optimal known solution. The analysis of hyperparameters reveals the importance of elitism, number of generations and individuals and the robustness of the algorithm to different crossover and mutation techniques, as well as the great performance of tournament selection. 
 \end{abstract}
 
 \newpage
@@ -433,14 +433,14 @@ The results shown on the second graph are not so conclusive. Based on the option
 
 In the case of the crossover rate, the results are even less decisive. All the options provide similar results, although the one present in the best configuration is crossover rate 1. This is not what we expected, as in the GA section of \cite{Eiben2003} it states that a common recommendation is to use a crossover rate between 0.6 and 0.8. We could assess this to the fact that we are not performing a canonical GA, but either way, the difference is not dramatic. 
 
-\begin{figure}
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{../results/parent_selection_method_boxplot.png}
     \label{fig:parent_selection}
 \end{figure}
 
 The graph regarding parent selection methods is the one with most options and offers a lot of insight. In the first place, we see a big gap in performance between the random selection method and the other three, as expected. On the other hand, we see a non-negligible difference between rank-roulette and normal roulette selection. The better performance of roulette selection could be due to it being more sensible to distance variation than rank-roulette selection. Finally, we notice that both tournament selection set-ups are better, in terms of median and standard deviation, than the other methods, having even better results with tournament size 5 instead of 3. This surprised us at first, and we still don't have a clear explanation for it. Tournament selection also mimics in a more faithful way the real world as it follows some sort of survival of the fittest.
 
-\begin{figure}
+\begin{figure}[H]
     \includegraphics[width=0.8\textwidth]{../results/elitism_boxplot.png}
     \label{fig:elitism}
 \end{figure}
@@ -459,16 +459,16 @@ For the elitism parameter, we can see that it certainly helps to preserve the be
     \end{subfigure}
 \end{figure}
 
-About the crossover and mutation operations we cannot deduce any clear pattern from the results. The differences between the methods are not significant. This is a good sign, as it means that the algorithm is robust to changes in these parameters. The POS and OX1 crossover techniques are very similar, so we can explain the similarity of the results by this, but the mutation techniques are fundamentally different, so it is interesting that they have similar results. 
+About the crossover and mutation operations we cannot deduce any clear pattern from the results. The differences between the methods are not significant. This is a good sign, as it means that the algorithm is robust to changes in these parameters. The POS and OX1 crossover techniques are very similar, and we can attribute the similarity of the results by this. On the other side, the mutation techniques are fundamentally different, so it is interesting that they have similar results. 
 
 % Conclusion
 \section{Conclusion}
 
 This research investigated the application of Genetic Algorithms (GAs) to solve the Traveling Salesman Problem (TSP). By implementing a GA framework and experimenting with various genetic operators and parent selection methods, we were able to achieve promising results.
 
-The best configuration identified during the grid search yielded a solution within 1.73\% of the optimal known solution for the bays29 dataset. This demonstrates the effectiveness of GAs in tackling the TSP, even for relatively small problem instances.
+The best configuration identified during the grid search yielded a solution within 1.73\% of the optimal known solution for the bays29 dataset. This shows the effectiveness of GAs in tackling the TSP, even for relatively small problem instances.
 
-The analysis of hyperparameters highlighted the importance of elitism in preserving high-quality solutions and the robustness of the algorithm to different crossover and mutation techniques. While the results for different crossover and mutation operators were similar, further exploration with a larger dataset and more complex problem instances could reveal potential differences in their performance.
+The analysis of hyperparameters highlighted the importance of elitism in preserving high-quality solutions and the robustness of the algorithm to different crossover and mutation techniques. While the results for different crossover and mutation operators were similar, further exploration with a larger dataset and more complex problem instances could reveal potential differences in their performance. Besides this, we noticed the great performance of tournament selection as a parent selection method. In addition to this, the amount of generations and population size were proven to have a great influence in the results, as expected.
 
 Future work could involve exploring more advanced genetic operators. Moreover, selecting different heuristics for selecting the initial population and investigating the application of GAs to larger and more complex TSP instances would be a valuable direction for future research.
 
