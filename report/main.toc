@@ -33,8 +33,8 @@
 \contentsline {subsection}{\numberline {4.5}Discussion}{8}{subsection.4.5}%
 \contentsline {section}{\numberline {5}Conclusion}{8}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Summary}{8}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Future Work}{8}{subsection.5.2}%
-\contentsline {section}{\numberline {A}Appendix: Class Documentation}{9}{appendix.A}%
-\contentsline {subsection}{\numberline {A.1}Genetic Algorithm Class}{9}{subsection.A.1}%
-\contentsline {subsection}{\numberline {A.2}Crossover Class}{10}{subsection.A.2}%
-\contentsline {subsection}{\numberline {A.3}Mutation Class}{10}{subsection.A.3}%
+\contentsline {subsection}{\numberline {5.2}Future Work}{10}{subsection.5.2}%
+\contentsline {section}{\numberline {A}Appendix: Class Documentation}{11}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}Genetic Algorithm Class}{11}{subsection.A.1}%
+\contentsline {subsection}{\numberline {A.2}Crossover Class}{12}{subsection.A.2}%
+\contentsline {subsection}{\numberline {A.3}Mutation Class}{12}{subsection.A.3}%

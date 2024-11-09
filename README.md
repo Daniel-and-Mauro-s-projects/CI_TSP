@@ -8,17 +8,16 @@ Genetic Algorithms+TSP
 - Should we just create offspring and select from there
 
 # To do list
-- [ ] IMPORTANT: fitness function currently is distance which is more like a cost function (we want to minimize it), solve this. For example in roulette it doesn't make sense because we reward big distances. 
+- [x] IMPORTANT: fitness function currently is distance which is more like a cost function (we want to minimize it), solve this. For example in roulette it doesn't make sense because we reward big distances. 
   - [x] Maybe we could do fitness = 1/distance
 - [x] Elitism
 - [ ] Write about the configuration of hypereparameters we decided not to do
-- [ ] Plot function
-- [ ] Add hyperparameters:
+- [x] Plot function
+- [x] Add hyperparameters:
   - [x] nº of iterations
   - [x] nº of prints (how often we represent the evolution on the fitness of the generations)
 - [x] Add matrix of distances implementation
-- [ ] Improve computing time
-- [ ] Code parent selection methods
+- [x] Code parent selection methods
   - [x] tournament
   - [x] roulette
   - [x] rank roulette
@@ -31,7 +30,7 @@ Genetic Algorithms+TSP
   - [x] Insertion
   - [x] Exchange
   - [x] IVM
-- [] Add stagnation convergence (before ending the generations) WE DECIDED NOT TO DO IT, BECAUSE IT NEGLECT THE EFFECT OF GENERATIONS and COMMENT ON THE PLOTS IF IT WOULD BE USEFUL
+- [ ] Add stagnation convergence (before ending the generations) WE DECIDED NOT TO DO IT, BECAUSE IT NEGLECT THE EFFECT OF GENERATIONS and COMMENT ON THE PLOTS IF IT WOULD BE USEFUL
 - [ ] AT THE END
   - [ ] Check function descriptors says all the hyperparameter options
   - [ ] Talk about the optional parameters of the methods we implemented but didn't tested
