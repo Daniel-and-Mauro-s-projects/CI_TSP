@@ -95,7 +95,6 @@
 \newpage
 
 
-
 %%%% start counting pages:
 \pagenumbering{arabic}
 
@@ -137,7 +136,7 @@ In this work we employed the Pittsburgh view, where each individual in the popul
 \end{figure}
 
 
-We considered different approaches on the representation of each chromosome, either binary code or integer code. Using binary code, each solution would be a string of bits, with each city being a certain number of them. There are variations that use a different encoding mechanism, for example gray encoding. The integer code is a list of integers, where each city is represented by an integer. In the end, we decided to use integer code (called \textit{path representation} in \cite{Larranaga1999}), as it is more intuitive and in binary code, the number of bits used for each city could not be divided. This decision was also influenced by the research made in \cite{Larranaga1999}, where the authors explicitly state the following about binary code :
+We considered different approaches on the representation of each chromosome, either binary code or integer code. Using binary code, each solution would be a string of bits, with each city being a certain number of them. There are variations that use a different encoding mechanism, for example gray encoding. The integer code is a list of integers, where each city is represented by an integer. In the end, we decided to use integer code (called \textit{path representation} in \cite{Larranaga1999}), as it is more intuitive and in binary code, the number of bits used for each city could not be divided. This decision was also influenced by the research made in \cite{Larranaga1999}, where the authors explicitly state the following about binary code:
 \begin{quote}
 This representation might be useful for small problem instances of the TSP.
 However, for larger problem instances the binary strings which represent
@@ -146,9 +145,7 @@ representation is that the classical operators do not necessarily result in lega
 offspring tours; repair algorithms would be necessary.
 \end{quote}
 
-In this sense, we are not doing what it is often called canonical or simple genetic algorithm (SGA) as it is described in \cite{Eiben2003}, where the representation is binary. It would be more accurate to say we are using Non-Canonical GAs with integer code representation for each permutation, as they are described in Chapter 17 of \cite{Back2000}.  
-
-
+In this sense, we are not doing what it is often called canonical or simple genetic algorithm (SGA) as it is described in \cite{Eiben2003}, where the representation is binary. It would be more accurate to say we are using Non-Canonical GAs with integer code representation for each permutation, as they are described in Chapter 17 of \cite{Back2000}. We think that this approach is more suitable for the TSP, as it allows for a more direct representation of the problem and avoids the need for additional repair mechanisms.
 
 \subsection{An overview on Genetic Algorithms}
 Genetic Algorithms are, perhaps, the most known evolutionary algorithm. They were pioneered by John Holland in the 1970s, and have since undergone extensive research and numerous adaptations. 
@@ -158,7 +155,7 @@ given a population of $\mu$ individuals, we perform the following steps for a ce
 \begin{enumerate}
     \item Select $\mu$ parents from the population, allowing duplicates
     \item Shuffle the intermediary population and apply crossover and mutation operators to create new individuals
-    \item The intermediary population replaces the old population
+    \item The intermediary population replaces the old population.
 \end{enumerate}
 
 The selection of the parents is often performed using a selection operator that often requires a fitness function evaluating the quality of the individuals. Classic operators for population modification include bit-flip mutation and one-point crossover.
@@ -285,14 +282,14 @@ Elitism is a mechanism that ensures that the best individuals from the current p
 
 \subsection{Other Considered Approaches}
 \subsubsection{Fitness Function}
-As we already noted, we employed the total distance of the path as the value to optimize, to minimize if we want to be precise. However, the common approach would be to use a fitness function, were better chromosomes have higher values. In this sense, we could have used any monotonic decreasing function of the distance, for example, the reciprocal of the distance or a decaying exponential function. This would have allowed us to use the classic selection operators without modifications. However, we decided to use the distance directly, as it is more intuitive and straightforward.
+As we already noted, we employed the total distance of the path as the value to minimize. However, the common approach would be to use a fitness function, where better chromosomes have higher values. In this sense, we could have used any monotonic decreasing function of the distance, for example, the reciprocal of the distance or a decaying exponential function. This would have allowed us to use the classic selection operators without modifications. However, we decided to use the distance directly, as it is more intuitive and straightforward.
 
 \subsubsection{Population Replacement}
-In this work we used a generational approach, where the entire population is replaced at each generation $(\mu,\lambda), \mu=\lambda$. However, we also considered a steady-state approach where only a subset of the population is replaced at each generation. Ultimately we decided not to do this, as it would have required a more complex implementation and in words of \cite{Eiben2003}: "It can also lead to premature convergece as the population tends to rapidly focus on the fittest member". 
+In this work we used a generational approach, where the entire population is replaced at each generation $(\mu,\lambda)$, with  $\mu=\lambda$. However, we also considered a steady-state approach where only a subset of the population is replaced at each generation. Ultimately we decided not to do this, as it would have required a more complex implementation and in words of \cite{Eiben2003}: "It can also lead to premature convergece as the population tends to rapidly focus on the fittest member". 
 
 A useful follow-up of this work would be to implement a steady-state approach by inverse tournament selection as it doesn't remove as much genetic diversity, due to its innate randomness.
 
-Even though we described our implementation as $(\mu,\lambda), \mu=\lambda$, it could be seen as a $(\mu,\lambda), \mu>\lambda$ approach when we make use of elitism, as we keep the best individuals from the previous generation and $\mu=\lambda+\text{elitism}$.
+Even though we described our implementation as $(\mu,\lambda), \mu=\lambda$, it could be seen as a $(\mu,\lambda), \mu>\lambda$ approach when we make use of elitism, as we keep the best individuals from the previous generation: $\mu=\lambda+\text{elitism}$.
 
 
 \subsubsection{Population Initialization}

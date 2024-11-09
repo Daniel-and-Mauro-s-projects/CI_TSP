@@ -7,6 +7,7 @@
 \contentsline {subsection}{\numberline {2.3}Parent Selection Methods}{2}{subsection.2.3}%
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 \contentsline {subsection}{\numberline {2.4}Crossover techniques}{3}{subsection.2.4}%
 =======
 \contentsline {subsection}{\numberline {2.4}Crossover techniques}{2}{subsection.2.4}%
@@ -33,17 +34,21 @@
 <<<<<<< HEAD
 =======
 \contentsline {subsection}{\numberline {2.4}Crossover Techniques}{2}{subsection.2.4}%
+=======
+\contentsline {subsection}{\numberline {2.4}Crossover Techniques}{3}{subsection.2.4}%
+>>>>>>> cbc6ba2 (add clarifications, fix typos)
 \contentsline {subsubsection}{\numberline {2.4.1}Position-based Crossover (POS)}{3}{subsubsection.2.4.1}%
 \contentsline {paragraph}{Implementation of POS Crossover:}{3}{section*.3}%
 \contentsline {paragraph}{Example:}{3}{section*.4}%
 \contentsline {paragraph}{Role in Genetic Algorithm:}{4}{section*.5}%
 \contentsline {subsubsection}{\numberline {2.4.2}Order-based Crossover (OX1)}{4}{subsubsection.2.4.2}%
 \contentsline {paragraph}{Implementation of OX1 Crossover:}{4}{section*.6}%
-\contentsline {paragraph}{Example:}{4}{section*.7}%
+\contentsline {paragraph}{Example:}{5}{section*.7}%
 \contentsline {paragraph}{Role in Genetic Algorithm:}{5}{section*.8}%
 \contentsline {subsubsection}{\numberline {2.4.3}Summary}{5}{subsubsection.2.4.3}%
 \contentsline {subsection}{\numberline {2.5}Mutation Operators}{5}{subsection.2.5}%
 \contentsline {subsection}{\numberline {2.6}Elitism}{6}{subsection.2.6}%
+<<<<<<< HEAD
 \contentsline {section}{\numberline {3}Implementation}{6}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Environment Setup}{6}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Code Structure}{7}{subsection.3.2}%
@@ -62,3 +67,22 @@
 \contentsline {subsection}{\numberline {A.1}\_\_init\_\_ Parameters}{7}{subsection.A.1}%
 \contentsline {subsection}{\numberline {A.2}run Parameters}{8}{subsection.A.2}%
 >>>>>>> 18ae3d9 (genetic algorithm class, crossover class, hyperparameter explanation, annex)
+=======
+\contentsline {subsection}{\numberline {2.7}Other Considered Approaches}{6}{subsection.2.7}%
+\contentsline {subsubsection}{\numberline {2.7.1}Fitness Function}{6}{subsubsection.2.7.1}%
+\contentsline {subsubsection}{\numberline {2.7.2}Population Replacement}{7}{subsubsection.2.7.2}%
+\contentsline {subsubsection}{\numberline {2.7.3}Population Initialization}{7}{subsubsection.2.7.3}%
+\contentsline {subsubsection}{\numberline {2.7.4}Other Operators}{7}{subsubsection.2.7.4}%
+\contentsline {section}{\numberline {3}Implementation}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Environment Setup}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Code Structure}{8}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Key Algorithms}{8}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Position-Based Crossover}{8}{subsubsection.3.3.1}%
+\contentsline {section}{\numberline {4}Results}{8}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Experimental Setup}{8}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Performance Analysis}{9}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Discussion}{9}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Conclusion}{9}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Summary}{9}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Future Work}{9}{subsection.5.2}%
+>>>>>>> cbc6ba2 (add clarifications, fix typos)
