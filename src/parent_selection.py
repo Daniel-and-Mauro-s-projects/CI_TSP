@@ -35,11 +35,10 @@ class parent_selection:
             list[int]: The selected chromosome.
         """
         # We get a sorted list of indices of the population based on the distance scores (from worst to best)
-        ranks = np.argsort(distance_scores)#[::-1]
+        ranks = np.argsort(distance_scores)
 
         # The better ranks have a higher probability of being selected
         weights = np.array([1 / (i + 1) for i in ranks])
-        #weights = [rank/sum(ranks) for rank in ranks]
         return random.choices(population, weights=weights, k=1)[0]
     
     @staticmethod

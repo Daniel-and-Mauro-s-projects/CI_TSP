@@ -116,7 +116,7 @@ if __name__ == "__main__":
     parent2 = np.array([2, 4, 6, 8, 7, 5, 3, 1], dtype=int)
     number_of_pos = 3  # Number of positions to copy from each parent
     
-    crossover_operator = Crossover(parent1, parent2, number_of_pos)
+    crossover_operator = crossover(parent1, parent2, number_of_pos)
     
     # Using POS
     offspring1_pos, offspring2_pos = crossover_operator.POS()

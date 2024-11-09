@@ -30,8 +30,7 @@ class mutation:
         length = np.random.geometric(p)
         
         # Adjust length if it exceeds the path boundaries
-        if cut + length > len(path):
-            length = len(path) - cut
+        length = min(length, len(path) - cut)
         
         # Extract the subset
         subset = path[cut:cut + length]
