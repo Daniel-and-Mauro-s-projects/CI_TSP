@@ -13,6 +13,7 @@
 \usepackage{xcolor}              % Colors
 \usepackage{biblatex}
 \usepackage{tikz}                % Drawing
+\usepackage{url}                 % URLs
 
 % Bibliography file:
 \addbibresource{bibliography.bib}
@@ -100,9 +101,12 @@
 
 %%%%%%%%%%%%%%%
 \section{Introduction}
+The Traveling Salesman Problem (TSP) is a classic combinatorial optimization problem that has been extensively studied in the field of mathematics and computer science. The problem is defined as follows: given a set of cities and the distances between them, the goal is to find the shortest possible route that visits each city exactly once and returns to the starting city. The TSP is an NP-hard problem, meaning that there is no known polynomial-time algorithm that can solve it exactly for all instances. In this sense, algorithms such us Genetic Algorithms (GAs) have been proposed as a way to find approximate solutions to the TSP.
 
-\subsection{Problem setup}
-TODO: 
+\subsection{Dataset}
+In this work, we consider a dataset of 29 cities from Bavaria, Germany. The dataset contains the coordinates of each city, as well as the distances between them (provided in a distance matrix). The dataset (called \textit{bays29.tsp}) is available at the following link: \url{http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/tsp/}
+
+
 \subsection{Background}
 TODO: Provide background information on the topic, including relevant literature and the motivation behind the project.
 
@@ -156,7 +160,7 @@ The traditional genetic algorithm, according to \cite{Eiben2003}, uses bit-strin
 given a population of $\mu$ individuals, we perform the following steps for a certain number of generations:
 \begin{enumerate}
     \item Select $\mu$ parents from the population, allowing duplicates
-    \item Shuffle the intermediary population using crossover and mutation operators
+    \item Shuffle the intermediary population and apply crossover and mutation operators to create new individuals
     \item The intermediary population replaces the old population
 \end{enumerate}
 
@@ -186,6 +190,26 @@ The mutation operator is a crucial part of the genetic algorithm, as it introduc
 
 \subsection{Elitism}
 Elitism is a mechanism that ensures that the best individuals from the current population are passed on to the next generation. This helps maintain the best solutions found so far and prevents the degradation of chromosome quality. In our implementation, we considered GA configurations without elitism and with elitism, both keeping the best individual and the three best individuals from the previous generation.
+
+\subsection{Other Considered Approaches}
+\subsubsection{Fitness Function}
+As we already noted, we employed the total distance of the path as the value to optimize, to minimize if we want to be precise. However, the common approach would be to use a fitness function, were better chromosomes have higher values. In this sense, we could have used any monotonic decreasing function of the distance, for example, the reciprocal of the distance or a decaying exponential function. This would have allowed us to use the classic selection operators without modifications. However, we decided to use the distance directly, as it is more intuitive and straightforward.
+
+\subsubsection{Population Replacement}
+In this work we used a generational approach, where the entire population is replaced at each generation $(\mu,\lambda), \mu=\lambda$. However, we also considered a steady-state approach where only a subset of the population is replaced at each generation. Ultimately we decided not to do this, as it would have required a more complex implementation and in words of \cite{Eiben2003}: "It can also lead to premature convergece as the population tends to rapidly focus on the fittest member". 
+
+A useful follow-up of this work would be to implement a steady-state approach by inverse tournament selection as it doesn't remove as much genetic diversity, due to its innate randomness.
+
+Even though we described our implementation as $(\mu,\lambda), \mu=\lambda$, it could be seen as a $(\mu,\lambda), \mu>\lambda$ approach when we make use of elitism, as we keep the best individuals from the previous generation and $\mu=\lambda+\text{elitism}$.
+
+
+\subsubsection{Population Initialization}
+We evaluated different ways to initialize the population, including random initialization (the one we opted for) and heuristic initialization. This last one, refers to the usage of a heuristic algorithm to generate the initial population. This could be useful for large instances of the TSP, as it would provide a good starting point for the genetic algorithm. The practice is commented in Chapter 13 of \cite{Back2000}, where the authors also explore the hybridization of evolutionary strategies with domain specific knowledge and algorithms, highlighting the good results of the available literature.
+
+However, we decided not to implement this, as it would require the usage of a heuristic algorithm and other techniques that are out of the scope of this work. Having said this, it would be interesting to further explore this.
+
+\subsubsection{Other Operators}
+TODO: Write about some options and the reasons why we didn't use them. (computational time of the grid search, etc.)
 
 % Implementation
 \section{Implementation}
@@ -224,7 +248,7 @@ To use all of these modules, we set up a jupyter notebook file \textit{tsp.ipynb
         \draw[->] (parent_selection) -- (tsp_genetic);
         \draw[->] (tsp_genetic) -- (tsp_notebook);
     \end{tikzpicture}
-    \caption{Code Structure Diagram: Data flow from crossover.py, mutation.py, and parent\_selection.py into tsp\_genetic.py, which is then utilized in tsp.ipynb .}
+    \caption{Code Structure Diagram}
     \label{fig:code_structure}
 \end{figure}
 

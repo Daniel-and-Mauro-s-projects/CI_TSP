@@ -19,6 +19,41 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{Back2000}{book}{}
+      \name{author}{3}{}{%
+        {{hash=63db21b1dd89fc12aac7791967820b87}{%
+           family={Bäck},
+           familyi={B\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=fd6f0f968fcbbd11e8bfc740337efdb0}{%
+           family={Fogel},
+           familyi={F\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=4a8cba6efa3afc65630aa05f0cbd9b66}{%
+           family={Michalewicz},
+           familyi={M\bibinitperiod},
+           given={Zbigniew},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \strng{namehash}{84f04138094a36746a4d6450e423e3e1}
+      \strng{fullhash}{84f04138094a36746a4d6450e423e3e1}
+      \strng{bibnamehash}{84f04138094a36746a4d6450e423e3e1}
+      \strng{authorbibnamehash}{84f04138094a36746a4d6450e423e3e1}
+      \strng{authornamehash}{84f04138094a36746a4d6450e423e3e1}
+      \strng{authorfullhash}{84f04138094a36746a4d6450e423e3e1}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{01}
+      \field{title}{Evolutionary Computation 2---Advanced Algorithms and Operators}
+      \field{year}{2000}
+      \verb{doi}
+      \verb 10.1201/9781420034349
+      \endverb
+    \endentry
     \entry{Belanche2024}{misc}{}
       \name{author}{1}{}{%
         {{hash=f95ac5255f4db054882b7002963ff07a}{%
@@ -42,6 +77,39 @@
       \field{labeltitlesource}{title}
       \field{title}{Lecture slides in Computational Intelligence: Introduction to Genetic Algorithms}
       \field{year}{2024}
+    \endentry
+    \entry{Eiben2003}{book}{}
+      \name{author}{2}{}{%
+        {{hash=a3ec68101e61dae4ed8eef4de8f75225}{%
+           family={Eiben},
+           familyi={E\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=24b7be5b577041e83bf3c4fe658111a5}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Jim},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{e08563c4b5311f60c89d433cf081f173}
+      \strng{fullhash}{e08563c4b5311f60c89d433cf081f173}
+      \strng{bibnamehash}{e08563c4b5311f60c89d433cf081f173}
+      \strng{authorbibnamehash}{e08563c4b5311f60c89d433cf081f173}
+      \strng{authornamehash}{e08563c4b5311f60c89d433cf081f173}
+      \strng{authorfullhash}{e08563c4b5311f60c89d433cf081f173}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-642-07285-7}
+      \field{journaltitle}{Computing Reviews}
+      \field{month}{01}
+      \field{title}{Introduction To Evolutionary Computing}
+      \field{volume}{45}
+      \field{year}{2003}
+      \verb{doi}
+      \verb 10.1007/978-3-662-05094-1
+      \endverb
     \endentry
     \entry{Larranaga1999}{article}{}
       \name{author}{5}{}{%
