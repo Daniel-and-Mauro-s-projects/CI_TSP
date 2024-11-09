@@ -91,7 +91,7 @@ class TSP_Genetic:
         """
         # Plot the cities
         plt.plot(self.cities[:,0],self.cities[:,1],'o')
-        for (x, y), label in zip(self.cities, [str(i) for i in range(1, self.n_cities+1)]):
+        for (x, y), label in zip(self.cities, [str(i) for i in range(1, self.n_cities)]):
             plt.text(x, y + 0.1, label, ha='center', va='bottom')
 
         # Plot the route

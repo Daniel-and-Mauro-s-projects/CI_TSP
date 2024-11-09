@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass[11pt]{article}
 
 % Packages
 \usepackage[utf8]{inputenc}      % Encoding of the document
@@ -30,10 +30,10 @@
 % Page Layout
 \geometry{
     a4paper,
-    left=1in,
-    right=1in,
-    top=1in,
-    bottom=1in,
+    left=0.75in,
+    right=0.75in,
+    top=0.75in,
+    bottom=0.75in,
 }
 
 % Hyperlink setup
@@ -107,11 +107,6 @@
 \section{Introduction}
 The Traveling Salesman Problem (TSP) is a classic combinatorial optimization problem that has been extensively studied in the field of mathematics and computer science. The problem is defined as follows: given a set of cities and the distances between them, the goal is to find the shortest possible route that visits each city exactly once and returns to the starting city. The TSP is an NP-hard problem, meaning that there is no known polynomial-time algorithm that can solve it exactly for all instances. In this sense, algorithms such us Genetic Algorithms (GAs) have been proposed as a way to find approximate solutions to the TSP.
 
-<<<<<<< HEAD
-=======
-\section{Objectives and Scope}
-
->>>>>>> b368268 (...)
 \subsection{Objectives}
 
 The primary objective of this research is to investigate the effectiveness of Genetic Algorithms (GAs) in solving the Traveling Salesman Problem (TSP) and to identify optimal parameter configurations that lead to improved performance. Specifically, we aim to:
@@ -233,7 +228,7 @@ A possible crossover operation could be:
     \item Copy the elements at the selected positions from \texttt{Parent1} to the offspring. Now the partially filled offspring looks like this: \ [4, \_, 3, \_, \_].
     \item Fill the remaining positions with the elements from \texttt{Parent2} that are not already present in the offspring.
     \item Final \texttt{Offspring 1:} \ [4, 2, 3, 1, 5].
-    \item For the second offspring, we use the same positions, the coresponing elements are [2, 1], so the offspring will look like this: \ [2, \_, 1, \_, \_].
+    \item For the second offspring, we use the same positions, the corresponing elements are [2, 1], so the offspring will look like this: \ [2, \_, 1, \_, \_].
     \item After filling it in from \texttt{Parent 1}, we end up with the final \texttt{Offspring 2:} \ [2, 4, 1, 3, 5].
 \end{enumerate}
 
@@ -373,34 +368,36 @@ To use all of these modules, we set up a jupyter notebook file \textit{tsp.ipynb
 % Results
 \section{Results}
 \subsection{Experimental Setup}
-In order to evaluate the influence of each hyperparameter on the performance of the genetic algorithm, we conducted a grid search over a range of values for each parameter. The hyperparameters considered in the grid search were:
+In order to evaluate the influence of each hyperparameter on the performance of the genetic algorithm, we conducted a grid search over a range of values for each parameter. The hyperparameters considered in the grid search were (3240 total configurations):
 \begin{itemize}
     \item \textbf{population\_size}: [50, 200], \textbf{elitism}: [0, 1, 3], \textbf{generations}: [100, 200]
     \item \textbf{m\_rate}: [0.01, 0.05, 0.1], \textbf{c\_rate}: [0.6, 0.8, 1]
     \item \textbf{select\_parents}: \{tournament, roulette, rank\_roulette, random\}
     \item \textbf{crossover}: \{POS, OX1\}, \textbf{mutation}: \{exchange, insertion, IVM\}
-    \item \textbf{tournament\_size}: [3, 5]
 \end{itemize}
-In total we considered 3240 different configurations, and we ran the genetic algorithm for each configuration to evaluate its performance.
-\subsection{Best Configuration}
 
-\begin{wrapfigure}{r}{0.50\textwidth}
+\begin{wrapfigure}[11]{r}{0.35\textwidth}
     \centering
-    \includegraphics[width=0.6\textwidth]{../results/best_chromosme.png}
-    \caption{Best route.}
+    \includegraphics[width=\linewidth]{../results/best_chromosme.png}
     \label{fig:best_route}
 \end{wrapfigure}
+
+\begin{itemize}
+    \item \textbf{tournament\_size}: [3, 5]
+\end{itemize}
+
+
+
+
+\subsection{Best Configuration}
 
 The best distance achieved was \textbf{2055.0}, using parameters:
 \begin{itemize}
     \item \textbf{population size}: 200
-    \item \textbf{elitism}: 1
-    \item \textbf{generations}: 200
-    \item \textbf{mutation rate}: 0.1
-    \item \textbf{crossover rate}: 1
+    \item \textbf{elitism}: 1,  \textbf{generations}: 200
+    \item \textbf{mutation rate}: 0.1,  \textbf{crossover rate}: 1
     \item \textbf{tournament selection} with a \textbf{tournament size}: 5
-    \item \textbf{crossover}: POS
-    \item \textbf{mutation}: insertion
+    \item \textbf{crossover}: POS,   \textbf{mutation}: insertion
 \end{itemize}
 
 \subsection{Performance Analysis}
