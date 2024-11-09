@@ -1,28 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.24)  9 NOV 2024 18:14
-=======
-<<<<<<< HEAD
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.24)  9 NOV 2024 15:44
-=======
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.11.1)  9 NOV 2024 14:31
->>>>>>> 5b95587 (add exact solver and some slight beauty changes)
->>>>>>> 50a6e87 (add exact solver and some slight beauty changes)
-=======
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.11.1)  9 NOV 2024 18:43
->>>>>>> 438867d (add crossover and mutation to report)
-=======
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.24)  9 NOV 2024 18:57
->>>>>>> 18ae3d9 (genetic algorithm class, crossover class, hyperparameter explanation, annex)
-=======
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.11.1)  9 NOV 2024 18:54
->>>>>>> cbc6ba2 (add clarifications, fix typos)
-=======
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.24)  9 NOV 2024 22:02
->>>>>>> d32b179 (...)
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.24)  9 NOV 2024 22:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -969,12 +945,6 @@ File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 zlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )))
-<<<<<<< HEAD
-Package hyperref Info: Option `colorlinks' set `true' on input line 40.
-
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2020/03/24 1.8d listings language file
-=======
 (/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
 \wrapoverhang=\dimen282
 \WF@size=\dimen283
@@ -982,7 +952,6 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 \WF@box=\box67
 \WF@everypar=\toks39
 Package: wrapfig 2003/01/31  v 3.6
->>>>>>> d32b179 (...)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgfplots/pgfplots.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
@@ -1295,26 +1264,7 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<<<<<<< HEAD
-Package hyperref Info: Link coloring ON on input line 80.
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
-Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
-
-(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
-Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
-Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
-)
-\c@section@level=\count453
-)
-LaTeX Info: Redefining \ref on input line 80.
-LaTeX Info: Redefining \pageref on input line 80.
-LaTeX Info: Redefining \nameref on input line 80.
-
-=======
 Package hyperref Info: Link coloring ON on input line 85.
->>>>>>> d32b179 (...)
 (./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
@@ -1369,351 +1319,123 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-<<<<<<< HEAD
-l.95 \newpage
-<<<<<<< HEAD
-              [2] [1] [2{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1
-.enc}] [3] [4]
-<<<<<<< HEAD
-=======
-l.94 \newpage
-              [2]
-=======
 l.100 \newpage
-               [2] [1] [2{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts
-1.enc}] [3] [4] [5] [6] [7]
+               [2] [1{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.en
+c}] [2] [3] [4] [5] [6] [7] [8]
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 3
-61.
->>>>>>> d32b179 (...)
+77.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 361.
-<../results/best_chromosme.png, id=269, 404.712pt x 298.4751pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 377.
+<../results/best_chromosme.png, id=284, 404.712pt x 298.4751pt>
 File: ../results/best_chromosme.png Graphic file (type png)
 <use ../results/best_chromosme.png>
-Package pdftex.def Info: ../results/best_chromosme.png  used on input line 370.
+Package pdftex.def Info: ../results/best_chromosme.png  used on input line 386.
 
 (pdftex.def)             Requested size: 271.7835pt x 200.45093pt.
 
-<<<<<<< HEAD
-LaTeX Warning: Citation 'Back2000' on page 1 undefined on input line 148.
-
-[1]
-
-LaTeX Warning: Citation 'Eiben2003' on page 2 undefined on input line 155.
-
-<<<<<<< HEAD
-[2{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [3]
->>>>>>> 50a6e87 (add exact solver and some slight beauty changes)
-! Missing $ inserted.
-<inserted text> 
-                $
-l.274 The best parameters were: {'population_
-=======
-[2] [3] [4]
-Overfull \hbox (6.72984pt too wide) in paragraph at lines 259--260
-=======
-              [2] [1] [2] [3] [4]
-Overfull \hbox (6.72984pt too wide) in paragraph at lines 263--264
->>>>>>> cbc6ba2 (add clarifications, fix typos)
-\OT1/cmr/m/n/12 Both the \OT1/cmr/bx/n/12 Position-based Crossover (POS) \OT1/c
-mr/m/n/12 and \OT1/cmr/bx/n/12 Order-based Crossover (OX1)
- []
-
-[5] [6] [7]
-! Missing $ inserted.
-<inserted text> 
-                $
-<<<<<<< HEAD
-l.345 The best parameters were: {'population_
->>>>>>> 438867d (add crossover and mutation to report)
-=======
-Overfull \hbox (17.09363pt too wide) in paragraph at lines 254--255
-=======
-Overfull \hbox (22.64978pt too wide) in paragraph at lines 370--371
+Overfull \hbox (45.29955pt too wide) in paragraph at lines 386--387
  [][] 
  []
 
 
-Underfull \hbox (badness 7273) in paragraph at lines 375--376
-[]\OT1/cmr/m/n/12 The best dis-tance achieved was
+Underfull \hbox (badness 7963) in paragraph at lines 398--399
+[]\OT1/cmr/bx/n/12 tournament se-lec-tion \OT1/cmr/m/n/12 with a
  []
 
 
-Overfull \hbox (2.91562pt too wide) in paragraph at lines 390--390
-[]\OT1/cmr/bx/n/14.4 Hyperparameter Anal-
+Underfull \hbox (badness 4193) in paragraph at lines 406--406
+[]\OT1/cmr/bx/n/14.4 Hyperparameter Anal-y-
  []
 
-<../results/population_size_boxplot.png, id=271, 722.7pt x 433.62pt>
+<../results/population_size_boxplot.png, id=286, 722.7pt x 433.62pt>
 File: ../results/population_size_boxplot.png Graphic file (type png)
 <use ../results/population_size_boxplot.png>
 Package pdftex.def Info: ../results/population_size_boxplot.png  used on input 
-line 396.
+line 412.
 (pdftex.def)             Requested size: 135.89174pt x 81.53513pt.
-<../results/generations_boxplot.png, id=272, 722.7pt x 433.62pt>
+<../results/generations_boxplot.png, id=287, 722.7pt x 433.62pt>
 File: ../results/generations_boxplot.png Graphic file (type png)
 <use ../results/generations_boxplot.png>
 Package pdftex.def Info: ../results/generations_boxplot.png  used on input line
- 401.
+ 417.
 (pdftex.def)             Requested size: 135.89174pt x 81.53513pt.
-<../results/elitism_boxplot.png, id=273, 722.7pt x 433.62pt>
+<../results/elitism_boxplot.png, id=288, 722.7pt x 433.62pt>
 File: ../results/elitism_boxplot.png Graphic file (type png)
 <use ../results/elitism_boxplot.png>
-Package pdftex.def Info: ../results/elitism_boxplot.png  used on input line 406
+Package pdftex.def Info: ../results/elitism_boxplot.png  used on input line 422
 .
 (pdftex.def)             Requested size: 135.89174pt x 81.53513pt.
-[8 <../results/best_chromosme.png>]
-<../results/mutation_rate_boxplot.png, id=281, 722.7pt x 433.62pt>
+[9 <../results/best_chromosme.png>]
+<../results/mutation_rate_boxplot.png, id=295, 722.7pt x 433.62pt>
 File: ../results/mutation_rate_boxplot.png Graphic file (type png)
 <use ../results/mutation_rate_boxplot.png>
 Package pdftex.def Info: ../results/mutation_rate_boxplot.png  used on input li
-ne 415.
+ne 431.
 (pdftex.def)             Requested size: 203.83417pt x 122.29938pt.
-<../results/crossover_rate_boxplot.png, id=282, 722.7pt x 433.62pt>
+<../results/crossover_rate_boxplot.png, id=296, 722.7pt x 433.62pt>
 File: ../results/crossover_rate_boxplot.png Graphic file (type png)
 <use ../results/crossover_rate_boxplot.png>
 Package pdftex.def Info: ../results/crossover_rate_boxplot.png  used on input l
-ine 420.
+ine 436.
 (pdftex.def)             Requested size: 203.83417pt x 122.29938pt.
-<../results/crossover_method_boxplot.png, id=283, 722.7pt x 433.62pt>
+<../results/crossover_method_boxplot.png, id=297, 722.7pt x 433.62pt>
 File: ../results/crossover_method_boxplot.png Graphic file (type png)
 <use ../results/crossover_method_boxplot.png>
 Package pdftex.def Info: ../results/crossover_method_boxplot.png  used on input
- line 429.
+ line 445.
 (pdftex.def)             Requested size: 135.89174pt x 81.53513pt.
-<../results/mutation_method_boxplot.png, id=284, 722.7pt x 433.62pt>
+<../results/mutation_method_boxplot.png, id=298, 722.7pt x 433.62pt>
 File: ../results/mutation_method_boxplot.png Graphic file (type png)
 <use ../results/mutation_method_boxplot.png>
 Package pdftex.def Info: ../results/mutation_method_boxplot.png  used on input 
-line 434.
+line 450.
 (pdftex.def)             Requested size: 135.89174pt x 81.53513pt.
-<../results/parent_selection_method_boxplot.png, id=285, 1011.78pt x 433.62pt>
+<../results/parent_selection_method_boxplot.png, id=299, 1011.78pt x 433.62pt>
 File: ../results/parent_selection_method_boxplot.png Graphic file (type png)
 <use ../results/parent_selection_method_boxplot.png>
 Package pdftex.def Info: ../results/parent_selection_method_boxplot.png  used o
-n input line 439.
+n input line 455.
 (pdftex.def)             Requested size: 135.89174pt x 58.23842pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 440--440
+Underfull \hbox (badness 10000) in paragraph at lines 456--456
 []\OT1/cmr/m/n/10.95 ((c)) |Par-ent Se-lec-tion
  []
 
-[9 <../results/population_size_boxplot.png> <../results/generations_boxplot.png
-> <../results/elitism_boxplot.png> <../results/mutation_rate_boxplot.png> <../r
-esults/crossover_rate_boxplot.png> <../results/crossover_method_boxplot.png> <.
-./results/mutation_method_boxplot.png> <../results/parent_selection_method_boxp
-lot.png>]
-Overfull \hbox (17.09363pt too wide) in paragraph at lines 465--466
->>>>>>> d32b179 (...)
+[10 <../results/population_size_boxplot.png> <../results/generations_boxplot.pn
+g> <../results/elitism_boxplot.png> <../results/mutation_rate_boxplot.png> <../
+results/crossover_rate_boxplot.png> <../results/crossover_method_boxplot.png> <
+../results/mutation_method_boxplot.png> <../results/parent_selection_method_box
+plot.png>]
+Overfull \hbox (17.09363pt too wide) in paragraph at lines 481--482
 \OT1/cmr/m/n/12 The core of our im-ple-men-ta-tion is the \OT1/cmr/m/it/12 tsp[
 ]genetic.py \OT1/cmr/m/n/12 mod-ule, which con-tains the \OT1/cmr/m/it/12 TSP[]
 Genetic
  []
 
-<<<<<<< HEAD
-[5]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.283 The best parameters were: {'population_
->>>>>>> 18ae3d9 (genetic algorithm class, crossover class, hyperparameter explanation, annex)
-=======
-l.369 The best parameters were: {'population_
->>>>>>> cbc6ba2 (add clarifications, fix typos)
-                                             size': 200, 'elitism': 1, 'gene...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-l.274 ...tion': 'insertion', 'tournament_size': 5}
-=======
-l.345 ...tion': 'insertion', 'tournament_size': 5}
->>>>>>> 438867d (add crossover and mutation to report)
-=======
-l.283 ...tion': 'insertion', 'tournament_size': 5}
->>>>>>> 18ae3d9 (genetic algorithm class, crossover class, hyperparameter explanation, annex)
-=======
-l.369 ...tion': 'insertion', 'tournament_size': 5}
->>>>>>> cbc6ba2 (add clarifications, fix typos)
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-l.275 
-=======
-l.346 
->>>>>>> 438867d (add crossover and mutation to report)
-=======
-l.284 
->>>>>>> 18ae3d9 (genetic algorithm class, crossover class, hyperparameter explanation, annex)
-=======
-l.370 
->>>>>>> cbc6ba2 (add clarifications, fix typos)
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.370 
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-Overfull \hbox (44.86035pt too wide) in paragraph at lines 270--275
-=======
-Overfull \hbox (44.86035pt too wide) in paragraph at lines 279--284
->>>>>>> 18ae3d9 (genetic algorithm class, crossover class, hyperparameter explanation, annex)
-\OT1/cmr/m/n/12 1\OML/cmm/m/it/12 ;[] generations[] \OT1/cmr/m/n/12 : 200\OML/c
-mm/m/it/12 ;[] m[]ate[] \OT1/cmr/m/n/12 : 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 1\
-OML/cmm/m/it/12 ;[] c[]ate[] \OT1/cmr/m/n/12 : 1\OML/cmm/m/it/12 ;[] select[]ar
-ents[] \OT1/cmr/m/n/12 :[] \OML/cmm/m/it/12 tournament[]election[];[] crossover
-[] \OT1/cmr/m/n/12 :[]
- []
-
-<<<<<<< HEAD
-[5] [6]
-! Undefined control sequence.
-<<<<<<< HEAD
-l.297 \chapter
-=======
-<<<<<<< HEAD
-l.273 \chapter
-=======
-l.194 \chapter
->>>>>>> 5b95587 (add exact solver and some slight beauty changes)
->>>>>>> 50a6e87 (add exact solver and some slight beauty changes)
-=======
-
-Overfull \hbox (12.66411pt too wide) in paragraph at lines 341--346
-=======
-
-Overfull \hbox (12.66411pt too wide) in paragraph at lines 365--370
->>>>>>> cbc6ba2 (add clarifications, fix typos)
-\OML/cmm/m/it/12 tournament[]election[];[] crossover[] \OT1/cmr/m/n/12 :[] \OML
-/cmm/m/it/12 POS[];[] mutation[] \OT1/cmr/m/n/12 :[] \OML/cmm/m/it/12 insertion
-[];[] tournament[]ize[] \OT1/cmr/m/n/12 :
- []
-
-[8] [9]
-! Undefined control sequence.
-l.392 \chapter
-              {Appendix A}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-[7] (./main.aux)
-=======
-<<<<<<< HEAD
-[6] (./main.aux)
->>>>>>> 50a6e87 (add exact solver and some slight beauty changes)
-=======
-[6] [7] [8] (./main.aux)
->>>>>>> 18ae3d9 (genetic algorithm class, crossover class, hyperparameter explanation, annex)
-=======
-[10] [11] (./main.aux)
->>>>>>> d32b179 (...)
+[11] [12] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-[9]
->>>>>>> 438867d (add crossover and mutation to report)
-=======
-[10]
->>>>>>> cbc6ba2 (add clarifications, fix typos)
 
-! LaTeX Error: \begin{enumerate} on input line 251 ended by \end{document}.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.395 \end{document}
-                    
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-(./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-<<<<<<< HEAD
-<<<<<<< HEAD
-(rerunfilecheck)             Checksum: BF7944CE013AD9BC9A8F2E5768A73C6F;3942.
-=======
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 6086074212D709D78B95D44E299AADE7;3650.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
->>>>>>> 438867d (add crossover and mutation to report)
-=======
-(rerunfilecheck)             Checksum: E2FCED76A84ADAB4FDD257835B0B5B70;4283.
->>>>>>> 18ae3d9 (genetic algorithm class, crossover class, hyperparameter explanation, annex)
-=======
-(rerunfilecheck)             Checksum: D8330378684737924F0BBE3FDDAD5EE5;4490.
->>>>>>> cbc6ba2 (add clarifications, fix typos)
-Package logreq Info: Writing requests to 'main.run.xml'.
-\openout1 = `main.run.xml'.
-
- )
-(\end occurred inside a group at level 1)
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-### simple group (level 1) entered at line 274 ({)
-=======
-### simple group (level 1) entered at line 283 ({)
->>>>>>> 18ae3d9 (genetic algorithm class, crossover class, hyperparameter explanation, annex)
-### bottom level 
-=======
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C54A792563494150D201A965BBD8FADA;4994.
+(rerunfilecheck)             Checksum: 75EE65A82E6C614C394C2C4A2C86A407;5063.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
->>>>>>> d32b179 (...)
 Here is how much of TeX's memory you used:
- 41494 strings out of 474222
- 926217 string characters out of 5748732
- 1937975 words of memory out of 5000000
- 63102 multiletter control sequences out of 15000+600000
+ 41502 strings out of 474222
+ 926279 string characters out of 5748732
+ 1938975 words of memory out of 5000000
+ 63103 multiletter control sequences out of 15000+600000
  568901 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,8n,87p,886b,1276s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1727,92 +1449,10 @@ s/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm120
 0.pfb>
-Output written on main.pdf (13 pages, 329899 bytes).
+Output written on main.pdf (14 pages, 331793 bytes).
 PDF statistics:
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
- 298 PDF objects out of 1000 (max. 8388607)
- 260 compressed objects within 3 object streams
- 56 named destinations out of 1000 (max. 500000)
- 237 words of extra memory for PDF output out of 10000 (max. 10000000)
-=======
- 257 PDF objects out of 1000 (max. 8388607)
- 220 compressed objects within 3 object streams
- 48 named destinations out of 1000 (max. 500000)
- 197 words of extra memory for PDF output out of 10000 (max. 10000000)
-=======
- ) 
-Here is how much of TeX's memory you used:
- 21092 strings out of 480171
- 356422 string characters out of 5894489
- 1289637 words of memory out of 5000000
- 38776 multiletter control sequences out of 15000+600000
- 475228 words of font info for 51 fonts, out of 8000000 for 9000
-=======
-### semi simple group (level 1) entered at line 247 (\begingroup)
-### bottom level 
-Here is how much of TeX's memory you used:
- 31077 strings out of 480171
- 580498 string characters out of 5894489
- 1245413 words of memory out of 5000000
- 48528 multiletter control sequences out of 15000+600000
-=======
-### semi simple group (level 1) entered at line 251 (\begingroup)
-### bottom level 
-Here is how much of TeX's memory you used:
- 31098 strings out of 480171
- 580994 string characters out of 5894489
- 1247344 words of memory out of 5000000
- 48541 multiletter control sequences out of 15000+600000
->>>>>>> cbc6ba2 (add clarifications, fix typos)
- 480091 words of font info for 69 fonts, out of 8000000 for 9000
- 59 hyphenation exceptions out of 8191
- 84i,8n,80p,890b,1365s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/danimacsai/.texlive2021/texmf-var/fonts/pk/ljfour/jknap
-pen/ec/tcrm1200.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmtt12.pfb>
-Output written on main.pdf (12 pages, 170533 bytes).
-PDF statistics:
-<<<<<<< HEAD
-<<<<<<< HEAD
- 192 PDF objects out of 1000 (max. 8388607)
- 170 compressed objects within 2 object streams
- 61 named destinations out of 1000 (max. 500000)
- 161 words of extra memory for PDF output out of 10000 (max. 10000000)
->>>>>>> 5b95587 (add exact solver and some slight beauty changes)
->>>>>>> 50a6e87 (add exact solver and some slight beauty changes)
-=======
- 312 PDF objects out of 1000 (max. 8388607)
- 273 compressed objects within 3 object streams
- 76 named destinations out of 1000 (max. 500000)
- 221 words of extra memory for PDF output out of 10000 (max. 10000000)
->>>>>>> 438867d (add crossover and mutation to report)
-=======
- 315 PDF objects out of 1000 (max. 8388607)
- 276 compressed objects within 3 object streams
- 59 named destinations out of 1000 (max. 500000)
- 253 words of extra memory for PDF output out of 10000 (max. 10000000)
->>>>>>> 18ae3d9 (genetic algorithm class, crossover class, hyperparameter explanation, annex)
-=======
- 354 PDF objects out of 1000 (max. 8388607)
- 313 compressed objects within 4 object streams
- 84 named destinations out of 1000 (max. 500000)
- 261 words of extra memory for PDF output out of 10000 (max. 10000000)
->>>>>>> cbc6ba2 (add clarifications, fix typos)
-=======
- 380 PDF objects out of 1000 (max. 8388607)
- 323 compressed objects within 4 object streams
- 84 named destinations out of 1000 (max. 500000)
- 330 words of extra memory for PDF output out of 10000 (max. 10000000)
->>>>>>> d32b179 (...)
+ 396 PDF objects out of 1000 (max. 8388607)
+ 338 compressed objects within 4 object streams
+ 91 named destinations out of 1000 (max. 500000)
+ 338 words of extra memory for PDF output out of 10000 (max. 10000000)
 

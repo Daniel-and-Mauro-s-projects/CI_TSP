@@ -2361,22 +2361,6 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">bibliography.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-<<<<<<< HEAD
-    <bcf:citekey order="1">Larranaga1999</bcf:citekey>
-    <bcf:citekey order="2">Larranaga1999</bcf:citekey>
-    <bcf:citekey order="3">Eiben2003</bcf:citekey>
-    <bcf:citekey order="4">Back2000</bcf:citekey>
-    <bcf:citekey order="5">Eiben2003</bcf:citekey>
-    <bcf:citekey order="6">Belanche2024</bcf:citekey>
-    <bcf:citekey order="7">Larranaga1999</bcf:citekey>
-    <bcf:citekey order="8">Larranaga1999</bcf:citekey>
-    <bcf:citekey order="9">Eiben2003</bcf:citekey>
-    <bcf:citekey order="10">Back2000</bcf:citekey>
-    <bcf:citekey order="11">Larranaga1999</bcf:citekey>
-    <bcf:citekey order="12">Eiben2003</bcf:citekey>
-    <bcf:citekey order="13">Back2000</bcf:citekey>
-    <bcf:citekey order="14">Belanche2024</bcf:citekey>
-=======
     <bcf:citekey order="1" intorder="1">Larranaga1999</bcf:citekey>
     <bcf:citekey order="2" intorder="1">Larranaga1999</bcf:citekey>
     <bcf:citekey order="3" intorder="1">Eiben2003</bcf:citekey>
@@ -2387,7 +2371,6 @@
     <bcf:citekey order="8" intorder="1">Larranaga1999</bcf:citekey>
     <bcf:citekey order="9" intorder="1">Eiben2003</bcf:citekey>
     <bcf:citekey order="10" intorder="1">Back2000</bcf:citekey>
->>>>>>> d32b179 (...)
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
