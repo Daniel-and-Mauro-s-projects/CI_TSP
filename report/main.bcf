@@ -2371,6 +2371,7 @@
     <bcf:citekey order="8" intorder="1">Larranaga1999</bcf:citekey>
     <bcf:citekey order="9" intorder="1">Eiben2003</bcf:citekey>
     <bcf:citekey order="10" intorder="1">Back2000</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">Eiben2003</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

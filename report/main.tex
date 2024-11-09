@@ -366,7 +366,7 @@ To use all of these modules, we set up a jupyter notebook file \textit{tsp.ipynb
 \end{figure}
 
 % Results
-\section{Results}
+\section{Discussion of Results}
 \subsection{Experimental Setup}
 In order to evaluate the influence of each hyperparameter on the performance of the genetic algorithm, we conducted a grid search over a range of values for each parameter. The hyperparameters considered in the grid search were (3240 total configurations):
 \begin{itemize}
@@ -401,6 +401,7 @@ The best distance achieved was \textbf{2055.0}, using parameters:
 To be able to measure the objective performance of the GA while tackling TSP, we reasoned that it would be useful to compare it to the optimal solution. For this, the brute force solution is certainly not feasible, so we searched for already existing implementations of algorithms. We found that the Concorde TSP solver is one of the best tools for this task. We used the Python wrapper \textit{concorde} to solve the TSP for the same dataset, but the runtime for the algorithm was too long, so we had to stop it. We also tried other methods and different LP solvers to get the exact optimal result, but unfortunately we did not succeed. This shows the difficulty of TSP and the need for approximate solutions: the GA was able to find a solution with a distance of 2055. We checked by hand that by changing two edges in the path we can improve this by 21 and by searching online (since this is a well known dataset) we found that the optimal distance is 2020. This means that the GA found a solution that is 1.73\% worse than the optimal solution. This is a good result, as the GA is a heuristic algorithm and it is not guaranteed to find the optimal solution.
 
 \subsection{Hyperparameter Analysis}
+In this section, we will analyze the boxplots of the results obtained from the grid search. Each graph will present the results of every considered configuration segmenting by hyperparameter possibility.
 
 \begin{figure}[H]
     \centering
@@ -414,6 +415,8 @@ To be able to measure the objective performance of the GA while tackling TSP, we
     \end{subfigure}
 \end{figure}
 
+On the first graph, we can see pretty intuitive results: the larger the population size and the more amount of generations, the better the results. This fact is also supported by the best configuration found and the literature consulted. In the case were we apply elitism, this would be evident as the metrics for each generation can only improve.
+
 \begin{figure}[H]
     \centering
     \begin{subfigure}{0.48\textwidth}
@@ -426,17 +429,23 @@ To be able to measure the objective performance of the GA while tackling TSP, we
     \end{subfigure}
 \end{figure}
 
+The results shown on the second graph are not so conclusive. Based on the options provided, we observe (slightly) that the larger the mutation rate, the better the results. This showcases the importance or the diversity provided by the mutation operator. It would be interesting to see if an even larger value would be worse. 
+
+In the case of the crossover rate, the results are even less decisive. All the options provide similar results, although the one present in the best configuration is crossover rate 1. This is not what we expected, as in the GA section of \cite{Eiben2003} it states that a common recommendation is to use a crossover rate between 0.6 and 0.8. We could assess this to the fact that we are not performing a canonical GA, but either way, the difference is not dramatic. 
+
 \begin{figure}
     \includegraphics[width=\textwidth]{../results/parent_selection_method_boxplot.png}
     \label{fig:parent_selection}
 \end{figure}
+
+The graph regarding parent selection methods is the one with most options and offers a lot of insight. In the first place, we see a big gap in performance between the random selection method and the other three, as expected. On the other hand, we see a non-negligible difference between rank-roulette and normal roulette selection. The better performance of roulette selection could be due to it being more sensible to distance variation than rank-roulette selection. Finally, we notice that both tournament selection set-ups are better, in terms of median and standard deviation, than the other methods, having even better results with tournament size 5 instead of 3. This surprised us at first, and we still don't have a clear explanation for it. Tournament selection also mimics in a more faithful way the real world as it follows some sort of survival of the fittest.
 
 \begin{figure}
     \includegraphics[width=0.8\textwidth]{../results/elitism_boxplot.png}
     \label{fig:elitism}
 \end{figure}
 
-For the elitism parameter, we can see that it certainly helps to preserve the best few individuals, since we clearly see an improvement in the distance when we use elitism. With elitism we also decrease the standard deviation of the distance, which is a good sign that the algorithm is more stable. On the other hand, it is not clear if saving the best individual or the best three individuals is better, as the results are very similar. When we keep the best three, the variance is less (which is clear), but because of this we lose out on the exploration of the solution space. This is a trade-off that we have to consider when using elitism.
+For the elitism parameter, we can see that it certainly helps to preserve the best few individuals, since we clearly see an improvement in the distance when we use elitism. With elitism, we also decrease the standard deviation of the distance, which is a good sign that the algorithm is more stable. On the other hand, it is not clear if saving the best individual or the best three individuals is better, as the results are very similar. When we keep the best three, the variance is less (which is clear), but because of this we lose out on the exploration of the solution space. This is a trade-off that we have to consider when using elitism.
 
 \begin{figure}[H]
     \centering
@@ -450,7 +459,7 @@ For the elitism parameter, we can see that it certainly helps to preserve the be
     \end{subfigure}
 \end{figure}
 
-About the crossover and mutation operations we can not deduce any clear pattern from the results. The differences between the methods are not significant. This is a good sign, as it means that the algorithm is robust to changes in these parameters. The POS and OX1 crossover techniques are very similar so we can explain the similarity of the results by this, but the mutation techniques are fundamentally different, so it is interesting that they have similar results. 
+About the crossover and mutation operations we cannot deduce any clear pattern from the results. The differences between the methods are not significant. This is a good sign, as it means that the algorithm is robust to changes in these parameters. The POS and OX1 crossover techniques are very similar, so we can explain the similarity of the results by this, but the mutation techniques are fundamentally different, so it is interesting that they have similar results. 
 
 % Conclusion
 \section{Conclusion}
