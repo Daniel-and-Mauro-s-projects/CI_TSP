@@ -8,7 +8,6 @@ from src.mutation import mutation as mu
 from src.crossover import crossover as cr
 
 import json
-import os
 
 logging.basicConfig(level=logging.INFO)
 

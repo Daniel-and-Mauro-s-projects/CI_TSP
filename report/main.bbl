@@ -16,5 +16,83 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{Belanche2024}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=f95ac5255f4db054882b7002963ff07a}{%
+           family={Belanche},
+           familyi={B\bibinitperiod},
+           given={Lluís\bibnamedelima A.},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Universitat Politècnica de Catalunya}%
+      }
+      \strng{namehash}{f95ac5255f4db054882b7002963ff07a}
+      \strng{fullhash}{f95ac5255f4db054882b7002963ff07a}
+      \strng{bibnamehash}{f95ac5255f4db054882b7002963ff07a}
+      \strng{authorbibnamehash}{f95ac5255f4db054882b7002963ff07a}
+      \strng{authornamehash}{f95ac5255f4db054882b7002963ff07a}
+      \strng{authorfullhash}{f95ac5255f4db054882b7002963ff07a}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Lecture slides in Computational Intelligence: Introduction to Genetic Algorithms}
+      \field{year}{2024}
+    \endentry
+    \entry{Larranaga1999}{article}{}
+      \name{author}{5}{}{%
+        {{hash=f13b38513c72c1aa48b3c3f6fd46bae0}{%
+           family={Larranaga},
+           familyi={L\bibinitperiod},
+           given={Pedro},
+           giveni={P\bibinitperiod}}}%
+        {{hash=a164155a903f7beb2217338ed2de423f}{%
+           family={Kuijpers},
+           familyi={K\bibinitperiod},
+           given={Cindy},
+           giveni={C\bibinitperiod}}}%
+        {{hash=13e925be69e8277029db61b6003e2f7b}{%
+           family={Murga},
+           familyi={M\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=d7406ddb152cc9229fe26dec618ed82c}{%
+           family={Inza},
+           familyi={I\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod}}}%
+        {{hash=b6db60ce58e672737b8f53523bb5a6f4}{%
+           family={Dizdarevic},
+           familyi={D\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{b1ee90806d671e4c57e59eb8f16f529a}
+      \strng{fullhash}{a3f3d18925d3542d38bbb171a14c2762}
+      \strng{bibnamehash}{b1ee90806d671e4c57e59eb8f16f529a}
+      \strng{authorbibnamehash}{b1ee90806d671e4c57e59eb8f16f529a}
+      \strng{authornamehash}{b1ee90806d671e4c57e59eb8f16f529a}
+      \strng{authorfullhash}{a3f3d18925d3542d38bbb171a14c2762}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Artificial Intelligence Review}
+      \field{month}{01}
+      \field{title}{Genetic Algorithms for the Travelling Salesman Problem: A Review of Representations and Operators}
+      \field{volume}{13}
+      \field{year}{1999}
+      \field{pages}{129\bibrangedash 170}
+      \range{pages}{42}
+      \verb{doi}
+      \verb 10.1023/A:1006529012972
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 

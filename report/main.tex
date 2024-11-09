@@ -12,10 +12,10 @@
 \usepackage{listings}            % Code listings
 \usepackage{xcolor}              % Colors
 \usepackage{biblatex}
+\usepackage{tikz}                % Drawing
 
 % Bibliography file:
 \addbibresource{bibliography.bib}
-\bibliography{bibliography}
 
 % To count pages after the index:
 \pagenumbering{gobble}
@@ -94,82 +94,161 @@
 \newpage
 
 
+
+%%%% start counting pages:
+\pagenumbering{arabic}
+
+%%%%%%%%%%%%%%%
 \section{Introduction}
 
 \subsection{Problem setup}
-
+TODO: 
 \subsection{Background}
-Provide background information on the topic, including relevant literature and the motivation behind the project.
+TODO: Provide background information on the topic, including relevant literature and the motivation behind the project.
 
 \subsection{Objectives and scope}
-Outline the main objectives and goals of the project. Define the scope and limitations of the study.
+TODO: Outline the main objectives and goals of the project. Define the scope and limitations of the study.
 
+
+
+%%%%%%%%%%%%%%%%%%%
 \section{Methodology}
+\subsection{Problem Representation}
+In this work we employed the Pittsburgh view, where each individual in the population represents a complete solution to the TSP. The representation of the problem is a permutation of the cities, where each city is visited exactly once. For example, for a set of cities $\{1,2,3,4\}$, solution $\{1,3,2,4\}$ would represent the path in figure \ref{fig:tsp_example}.
+
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}
+        % Define the nodes
+        \node[circle, draw, fill=blue!20] (1) at (0, 0) {1};
+        \node[circle, draw, fill=blue!20] (3) at (2, 2) {3};
+        \node[circle, draw, fill=blue!20] (2) at (4, 0) {2};
+        \node[circle, draw, fill=blue!20] (4) at (6, 2) {4};
+        
+        % Draw the arrows
+        \draw[->, thick] (1) -- (3);
+        \draw[->, thick] (3) -- (2);
+        \draw[->, thick] (2) -- (4);
+        \draw[->, thick] (4) -- (1);
+    \end{tikzpicture}
+    \caption{Path representation of a TSP solution with nodes 1, 3, 2, and 4.}
+    \label{fig:tsp_example}
+\end{figure}
+
+
+We considered different approaches on the representation of each chromosome, either binary code or integer code. Using binary code, each solution would be a string of bits, with each city being a certain number of them. There are variations that use a different encoding mechanism, for example gray encoding. The integer code is a list of integers, where each city is represented by an integer. In the end, we decided to use integer code (called \textit{path representation} in \cite{Larranaga1999}), as it is more intuitive and in binary code, the number of bits used for each city could not be divided. This decision was also influenced by the research made in \cite{Larranaga1999}, where the authors explicitly state the following about binary code :
+\begin{quote}
+This representation might be useful for small problem instances of the TSP.
+However, for larger problem instances the binary strings which represent
+the tours become unmanageably large. Another disadvantage of the binary
+representation is that the classical operators do not necessarily result in legal
+offspring tours; repair algorithms would be necessary.
+\end{quote}
+
+In this sense, we are not doing what it is often called canonical or simple genetic algorithm (SGA) as it is described in \cite{Eiben2003}, where the representation is binary. It would be more accurate to say we are using Non-Canonical GAs with integer code representation for each permutation, as they are described in Chapter 17 of \cite{Back2000}.  
+
+
+
 \subsection{An overview on Genetic Algorithms}
-Explain the basics of genetic algorithms, including selection, crossover, and mutation.
+Genetic Algorithms are, perhaps, the most known evolutionary algorithm. They were pioneered by John Holland in the 1970s, and have since undergone extensive research and numerous adaptations. 
+
+The traditional genetic algorithm, according to \cite{Eiben2003}, uses bit-string representation and works in the following way:
+given a population of $\mu$ individuals, we perform the following steps for a certain number of generations:
+\begin{enumerate}
+    \item Select $\mu$ parents from the population, allowing duplicates
+    \item Shuffle the intermediary population using crossover and mutation operators
+    \item The intermediary population replaces the old population
+\end{enumerate}
+
+The selection of the parents is often performed using a selection operator that often requires a fitness function evaluating the quality of the individuals. Classic operators for population modification include bit-flip mutation and one-point crossover.
+
+\subsection{Parent Selection Methods}
+Parent selection is a crucial step in the genetic algorithm, as it determines the genetic material that will be passed on to the next generation. In our case, we employed some of the most common mechanisms, according to the material proposed in the lectures \cite{Belanche2024}, and adapting them to the usage of the distance function instead of the fitness function (slightly different as we want to minimize it). The methods used were:
+\begin{itemize}
+    \item Random selection: parents are selected randomly from the population
+    \item Roulette wheel selection: the probability of selecting an individual is proportional to its fitness (in our case, inversely proportional to the distance function)
+    \item Rank roulette wheel selection: similar to the previous one, but the probability of selection is proportional to the rank of the individual (in our case, inversely proportional to the rank of the distance function)
+    \item Tournament selection: a random subset of the population is selected, and the best individual from this subset is chosen as a parent. We used subsets of size 3 and 5.
+\end{itemize}
+
 
 \subsection{Crossover techniques}
-Describe the POS operator, its implementation, and its role in the genetic algorithm.
+TODO:Describe the POS operator, its implementation, and its role in the genetic algorithm.
+/cite{Larranaga1999}
 
 \subsection{Mutation Operators}
-Detail the mutation operators used, such as Exchange, Insertion, and Inversion Mutation (IVM).
+The mutation operator is a crucial part of the genetic algorithm, as it introduces diversity into the population. For reference, we checked \cite{Larranaga1999}. In the end, in our implementation, we used the following mutation operators:
+\begin{itemize}
+    \item Exchange mutation: two random cities are arbitrarily swapped in the chromosome
+    \item Insertion mutation: a random city is removed and reinserted at another random position in the chromosome
+    \item TODO: Inversion mutation: a subset of the chromosome is reversed
+\end{itemize}
+
+\subsection{Elitism}
+Elitism is a mechanism that ensures that the best individuals from the current population are passed on to the next generation. This helps maintain the best solutions found so far and prevents the degradation of chromosome quality. In our implementation, we considered GA configurations without elitism and with elitism, both keeping the best individual and the three best individuals from the previous generation.
 
 % Implementation
 \section{Implementation}
 \subsection{Environment Setup}
-Describe the tools, libraries, and environment used for the implementation.
+One of our main goals, was to create a flexible and modular implementation that allows for easy experimentation with different configurations and operators. To achieve this, we used Python as the main programming language, and we implemented the parent-selection methods, crossover operators, and mutation operators as separate modules. This design allows us to easily swap out different operators and configurations without changing the core logic of the genetic algorithm. Aside from this, the class that contains the genetic algorithm is also modular, allowing for easy extension and modification. All of these files, can be found in the \textit{src} folder of the project.
+
+Another clear target of ours, was to code (almost) everything from scratch. For this reason, we only used the following libraries:
+\begin{enumerate}
+    \item \textit{numpy} for numerical operations and efficiency
+    \item \textit{random} for random number generation
+    \item \textit{matplotlib} for visualization
+    \item \textit{typing} for type hints
+    \item \textit{logging} for better debugging
+    \item \textit{json} to save the results
+    \item \textit{datetime} to save the results
+    \item \textit{pandas} to deal with the results in a more structured way for the analysis
+\end{enumerate}
+
+To use all of these modules, we set up a jupyter notebook file \textit{tsp.ipynb} that contains the data reading function, the grid search function and most graph plotting cells. In this notebook, we also wrote a \textit{Usage Example} section, where we show how to use the genetic algorithm class and all of its parameters, although if more insight is needed, all the functions and classes are documented in their respective docstrings.
 
 \subsection{Code Structure}
-Provide an overview of the code structure, including key modules and their functionalities.
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}[node distance=1cm, auto]
+        % Nodes
+        \node (crossover) [draw, rectangle] {crossover.py};
+        \node (mutation) [draw, rectangle, below of=crossover] {mutation.py};
+        \node (parent_selection) [draw, rectangle, below of=mutation] {parent\_selection.py};
+        \node (tsp_genetic) [draw, rectangle, right of=mutation, node distance=4cm] {tsp\_genetic.py};
+        \node (tsp_notebook) [draw, rectangle, right of=tsp_genetic, node distance=4cm] {tsp.ipynb};
+
+        % Arrows
+        \draw[->] (crossover) -- (tsp_genetic);
+        \draw[->] (mutation) -- (tsp_genetic);
+        \draw[->] (parent_selection) -- (tsp_genetic);
+        \draw[->] (tsp_genetic) -- (tsp_notebook);
+    \end{tikzpicture}
+    \caption{Code Structure Diagram: Data flow from crossover.py, mutation.py, and parent\_selection.py into tsp\_genetic.py, which is then utilized in tsp.ipynb .}
+    \label{fig:code_structure}
+\end{figure}
+
+
+Provide an overview of the code structure, including key modules and their functionalities. 
 
 \subsection{Key Algorithms}
-Include code snippets and explanations of the core algorithms implemented.
+Include code snippets and explanations of the core algorithms implemented. 
 
 \subsubsection{Position-Based Crossover}
-\begin{lstlisting}[caption=Position-Based Crossover Implementation]
-import random
 
-class Crossover:
-    def __init__(self, parent1, parent2, number_of_pos):
-        self.parent1 = parent1
-        self.parent2 = parent2
-        self.number_of_pos = number_of_pos
-
-    def POS(self) -> tuple[list[int], list[int]]:
-        # Select random positions for the subset
-        positions = random.sample(range(len(self.parent1)), self.number_of_pos)
-        
-        # Initialize offspring with None
-        offspring1 = [None] * len(self.parent1)
-        offspring2 = [None] * len(self.parent2)
-        
-        # Copy the selected positions from parents
-        for pos in positions:
-            offspring1[pos] = self.parent2[pos]
-            offspring2[pos] = self.parent1[pos]
-        
-        # Function to fill the remaining positions
-        def fill_offspring(offspring, parent):
-            current_index = 0
-            for city in parent:
-                if city not in offspring:
-                    while current_index < len(offspring) and offspring[current_index] is not None:
-                        current_index += 1
-                    if current_index < len(offspring):
-                        offspring[current_index] = city
-            return offspring
-        
-        # Fill the remaining positions for both offspring
-        offspring1 = fill_offspring(offspring1, self.parent1)
-        offspring2 = fill_offspring(offspring2, self.parent2)
-        
-        return offspring1, offspring2
-\end{lstlisting}
 
 % Results
 \section{Results}
 \subsection{Experimental Setup}
 Describe the experiments conducted, including parameters and datasets used.
+
+
+The number of configurations considered was: 3240
+The best chromosome found was: [11  8  4 25 28  2  1 20  0  7 26 22  6 24 18 10 21 13 16 17 14  3 19  9
+ 12 15 23 27  5]
+The best distance found was: 2055.0
+The best parameters were: {'population_size': 200, 'elitism': 1, 'generations': 200, 'm_rate': 0.1, 'c_rate': 1, 'select_parents': 'tournament_selection', 'crossover': 'POS', 'mutation': 'insertion', 'tournament_size': 5}
+
 
 \subsection{Performance Analysis}
 Present and analyze the results, using figures and tables as necessary.
