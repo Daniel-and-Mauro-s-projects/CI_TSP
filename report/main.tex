@@ -401,10 +401,9 @@ The best distance achieved was \textbf{2055.0}, using parameters:
 \end{itemize}
 
 \subsection{Performance Analysis}
-TODO: Tell that it is suboptimal, but it is almost the best. Comment on our usage of concorde
+To be able to measure the objective performance of the GA while tackling TSP, we reasoned that it would be useful to compare it to the optimal solution. For this, the brute force solution is certainly not feasible, so we searched for already existing implementations of algorithms. We found that the Concorde TSP solver is one of the best tools for this task. We used the Python wrapper \textit{concorde} to solve the TSP for the same dataset, but the runtime for the algorithm was too long, so we had to stop it. We also tried other methods and different LP solvers to get the exact optimal result, but unfortunately we did not succeed. This shows the difficulty of TSP and the need for approximate solutions: the GA was able to find a solution with a distance of 2055. We checked by hand that by changing two edges in the path we can improve this by 21 and by searching online (since this is a well known dataset) we found that the optimal distance is 2020. This means that the GA found a solution that is 1.73\% worse than the optimal solution. This is a good result, as the GA is a heuristic algorithm and it is not guaranteed to find the optimal solution.
 
 \subsection{Hyperparameter Analysis}
-
 
 \begin{figure}[H]
     \centering
@@ -463,6 +462,13 @@ Summarize the key findings and contributions of the project.
 
 \subsection{Future Work}
 Suggest potential areas for future research or improvements.
+
+\subsection{Notes on the usage of Generative AI}
+
+Here we describe our usage of Generative AI during the project: 
+\begin{itemize}
+    \item While coding, we used Copilot to generate the docsstrings for the functions. This was useful to have a structured documentation and to keep track of the parameters and return values of each function.
+    \item When writing the report, we used GPT o1 to generate the latex template and later to check for grammatical mistakes. 
 
 % References
 \newpage
