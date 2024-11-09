@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.24)  9 NOV 2024 18:14
 =======
 <<<<<<< HEAD
@@ -7,6 +8,9 @@ This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloade
 This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.11.1)  9 NOV 2024 14:31
 >>>>>>> 5b95587 (add exact solver and some slight beauty changes)
 >>>>>>> 50a6e87 (add exact solver and some slight beauty changes)
+=======
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.11.1)  9 NOV 2024 18:43
+>>>>>>> 438867d (add crossover and mutation to report)
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -672,92 +676,93 @@ Package: xparse 2022-01-12 L3 Experimental document command parser
 )
 Package: blx-case-expl3 2022/02/02 v3.17 expl3 case changing code for biblatex
 ))
-<<<<<<< HEAD
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks27
-\pgfutil@tempdima=\dimen176
-\pgfutil@tempdimb=\dimen177
-)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box56
-)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+\pgfutil@everybye=\toks26
+\pgfutil@tempdima=\dimen173
+\pgfutil@tempdimb=\dimen174
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
+ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box55
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)
-Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+Package: pgfrcs 2021/05/15 v3.1.9a (3.1.9a)
 ))
-Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+Package: pgf 2021/05/15 v3.1.9a (3.1.9a)
 
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
-Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks28
-\pgfkeys@temptoks=\toks29
+\pgfkeys@pathtoks=\toks27
+\pgfkeys@temptoks=\toks28
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered
-.code.tex
-\pgfkeys@tmptoks=\toks30
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.t
+ex
+\pgfkeys@tmptoks=\toks29
 ))
-\pgf@x=\dimen178
-\pgf@y=\dimen179
-\pgf@xa=\dimen180
-\pgf@ya=\dimen181
-\pgf@xb=\dimen182
-\pgf@yb=\dimen183
-\pgf@xc=\dimen184
-\pgf@yc=\dimen185
-\pgf@xd=\dimen186
-\pgf@yd=\dimen187
+\pgf@x=\dimen175
+\pgf@y=\dimen176
+\pgf@xa=\dimen177
+\pgf@ya=\dimen178
+\pgf@xb=\dimen179
+\pgf@yb=\dimen180
+\pgf@xc=\dimen181
+\pgf@yc=\dimen182
+\pgf@xd=\dimen183
+\pgf@yd=\dimen184
 \w@pgf@writea=\write4
 \r@pgf@reada=\read3
-\c@pgf@counta=\count428
-\c@pgf@countb=\count429
-\c@pgf@countc=\count430
-\c@pgf@countd=\count431
-\t@pgf@toka=\toks31
-\t@pgf@tokb=\toks32
-\t@pgf@tokc=\toks33
-\pgf@sys@id@count=\count432
+\c@pgf@counta=\count424
+\c@pgf@countb=\count425
+\c@pgf@countc=\count426
+\c@pgf@countd=\count427
+\t@pgf@toka=\toks30
+\t@pgf@tokb=\toks31
+\t@pgf@tokc=\toks32
+\pgf@sys@id@count=\count428
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
-File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
 )
 Driver file for pgf: pgfsys-pdftex.def
+
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
-File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
+File: pgfsys-pdftex.def 2021/05/15 v3.1.9a (3.1.9a)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.de
 f
-File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
 )))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
 tex
-File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfsyssoftpath@smallbuffer@items=\count433
-\pgfsyssoftpath@bigbuffer@items=\count434
+File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfsyssoftpath@smallbuffer@items=\count429
+\pgfsyssoftpath@bigbuffer@items=\count430
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
 tex
-File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
-Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen188
-\pgfmath@count=\count435
-\pgfmath@box=\box57
-\pgfmath@toks=\toks34
-\pgfmath@stack@operand=\toks35
-\pgfmath@stack@operation=\toks36
+\pgfmath@dimen=\dimen185
+\pgfmath@count=\count431
+\pgfmath@box=\box56
+\pgfmath@toks=\toks33
+\pgfmath@stack@operand=\toks34
+\pgfmath@stack@operation=\toks35
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
 .tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonomet
@@ -773,190 +778,189 @@ tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.
 tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
-thmetics.code.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+thmetics.code.tex)))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count436
+\c@pgfmathroundto@lastzeros=\count432
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
 x
-File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@picminx=\dimen189
-\pgf@picmaxx=\dimen190
-\pgf@picminy=\dimen191
-\pgf@picmaxy=\dimen192
-\pgf@pathminx=\dimen193
-\pgf@pathmaxx=\dimen194
-\pgf@pathminy=\dimen195
-\pgf@pathmaxy=\dimen196
-\pgf@xx=\dimen197
-\pgf@xy=\dimen198
-\pgf@yx=\dimen199
-\pgf@yy=\dimen256
-\pgf@zx=\dimen257
-\pgf@zy=\dimen258
+File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@picminx=\dimen186
+\pgf@picmaxx=\dimen187
+\pgf@picminy=\dimen188
+\pgf@picmaxy=\dimen189
+\pgf@pathminx=\dimen190
+\pgf@pathmaxx=\dimen191
+\pgf@pathminy=\dimen192
+\pgf@pathmaxy=\dimen193
+\pgf@xx=\dimen194
+\pgf@xy=\dimen195
+\pgf@yx=\dimen196
+\pgf@yy=\dimen197
+\pgf@zx=\dimen198
+\pgf@zy=\dimen199
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
 code.tex
-File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@path@lastx=\dimen259
-\pgf@path@lasty=\dimen260
+File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@path@lastx=\dimen256
+\pgf@path@lasty=\dimen257
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
 .tex
-File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@shorten@end@additional=\dimen261
-\pgf@shorten@start@additional=\dimen262
+File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@shorten@end@additional=\dimen258
+\pgf@shorten@start@additional=\dimen259
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
 x
-File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfpic=\box58
-\pgf@hbox=\box59
-\pgf@layerbox@main=\box60
-\pgf@picture@serial@count=\count437
+File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfpic=\box57
+\pgf@hbox=\box58
+\pgf@layerbox@main=\box59
+\pgf@picture@serial@count=\count433
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
 ode.tex
-File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgflinewidth=\dimen263
+File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgflinewidth=\dimen260
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
 s.code.tex
-File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@pt@x=\dimen264
-\pgf@pt@y=\dimen265
-\pgf@pt@temp=\dimen266
+File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@pt@x=\dimen261
+\pgf@pt@y=\dimen262
+\pgf@pt@temp=\dimen263
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
-File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+File: pgfcorequick.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.t
 ex
-File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+File: pgfcoreobjects.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing
 .code.tex
-File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
 x
-File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfarrowsep=\dimen267
+File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfarrowsep=\dimen264
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
-File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@max=\dimen268
-\pgf@sys@shading@range@num=\count438
-\pgf@shadingcount=\count439
+File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@max=\dimen265
+\pgf@sys@shading@range@num=\count434
+\pgf@shadingcount=\count435
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
-File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)
+File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
 tex
-File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfexternal@startupbox=\box61
-)
+File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfexternal@startupbox=\box60
+))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
 x
-File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+File: pgfcorelayers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.c
 ode.tex
-File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+File: pgfcoretransparency.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.
 tex
-File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+File: pgfcorepatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
-File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
-File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfnodeparttextbox=\box62
+File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfnodeparttextbox=\box61
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
-File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
 .sty
-Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
-\pgf@nodesepstart=\dimen269
-\pgf@nodesepend=\dimen270
+Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@nodesepstart=\dimen266
+\pgf@nodesepend=\dimen267
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
 .sty
-Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+Package: pgfcomp-version-1-18 2021/05/15 v3.1.9a (3.1.9a)
 )) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
-Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
-\pgffor@iter=\dimen271
-\pgffor@skip=\dimen272
-\pgffor@stack=\toks37
-\pgffor@toks=\toks38
+Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen268
+\pgffor@skip=\dimen269
+\pgffor@stack=\toks36
+\pgffor@toks=\toks37
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
-Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
 .code.tex
-File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count440
-\pgfplotmarksize=\dimen273
+File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@plot@mark@count=\count436
+\pgfplotmarksize=\dimen270
 )
-\tikz@lastx=\dimen274
-\tikz@lasty=\dimen275
-\tikz@lastxsaved=\dimen276
-\tikz@lastysaved=\dimen277
-\tikz@lastmovetox=\dimen278
-\tikz@lastmovetoy=\dimen279
-\tikzleveldistance=\dimen280
-\tikzsiblingdistance=\dimen281
-\tikz@figbox=\box63
-\tikz@figbox@bg=\box64
-\tikz@tempbox=\box65
-\tikz@tempbox@bg=\box66
-\tikztreelevel=\count441
-\tikznumberofchildren=\count442
-\tikznumberofcurrentchild=\count443
-\tikz@fig@count=\count444
+\tikz@lastx=\dimen271
+\tikz@lasty=\dimen272
+\tikz@lastxsaved=\dimen273
+\tikz@lastysaved=\dimen274
+\tikz@lastmovetox=\dimen275
+\tikz@lastmovetoy=\dimen276
+\tikzleveldistance=\dimen277
+\tikzsiblingdistance=\dimen278
+\tikz@figbox=\box62
+\tikz@figbox@bg=\box63
+\tikz@tempbox=\box64
+\tikz@tempbox@bg=\box65
+\tikztreelevel=\count437
+\tikznumberofchildren=\count438
+\tikznumberofcurrentchild=\count439
+\tikz@fig@count=\count440
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
-File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count445
-\pgfmatrixcurrentcolumn=\count446
-\pgf@matrix@numberofcolumns=\count447
+File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfmatrixcurrentrow=\count441
+\pgfmatrixcurrentcolumn=\count442
+\pgf@matrix@numberofcolumns=\count443
 )
-\tikz@expandcount=\count448
+\tikz@expandcount=\count444
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarytopaths.code.tex
-File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )))
+<<<<<<< HEAD
 <<<<<<< HEAD
 Package hyperref Info: Option `colorlinks' set `true' on input line 40.
 =======
 =======
 >>>>>>> 5b95587 (add exact solver and some slight beauty changes)
+=======
+>>>>>>> 438867d (add crossover and mutation to report)
 Package hyperref Info: Option `colorlinks' set `true' on input line 39.
 >>>>>>> 50a6e87 (add exact solver and some slight beauty changes)
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
-<<<<<<< HEAD
-\@quotelevel=\count449
-\@quotereset=\count450
-=======
-\@quotelevel=\count424
-\@quotereset=\count425
->>>>>>> 5b95587 (add exact solver and some slight beauty changes)
+\@quotelevel=\count445
+\@quotereset=\count446
  (./main.aux)
 \openout1 = `main.aux'.
 
@@ -981,31 +985,17 @@ LaTeX Font Info:    ... okay on input line 80.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-<<<<<<< HEAD
-\scratchcounter=\count451
-\scratchdimen=\dimen282
-\scratchbox=\box67
-\nofMPsegments=\count452
-\nofMParguments=\count453
-\everyMPshowfont=\toks39
-\MPscratchCnt=\count454
-\MPscratchDim=\dimen283
-\MPnumerator=\count455
-\makeMPintoPDFobject=\count456
-\everyMPtoPDFconversion=\toks40
-=======
-\scratchcounter=\count426
-\scratchdimen=\dimen173
-\scratchbox=\box55
-\nofMPsegments=\count427
-\nofMParguments=\count428
-\everyMPshowfont=\toks26
-\MPscratchCnt=\count429
-\MPscratchDim=\dimen174
-\MPnumerator=\count430
-\makeMPintoPDFobject=\count431
-\everyMPtoPDFconversion=\toks27
->>>>>>> 5b95587 (add exact solver and some slight beauty changes)
+\scratchcounter=\count447
+\scratchdimen=\dimen279
+\scratchbox=\box66
+\nofMPsegments=\count448
+\nofMParguments=\count449
+\everyMPshowfont=\toks38
+\MPscratchCnt=\count450
+\MPscratchDim=\dimen280
+\MPnumerator=\count451
+\makeMPintoPDFobject=\count452
+\everyMPtoPDFconversion=\toks39
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1053,8 +1043,6 @@ e
 Package hyperref Info: Link coloring ON on input line 80.
 =======
 Package hyperref Info: Link coloring ON on input line 79.
-<<<<<<< HEAD
-=======
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -1064,14 +1052,17 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count432
+\c@section@level=\count453
 )
 LaTeX Info: Redefining \ref on input line 79.
 LaTeX Info: Redefining \pageref on input line 79.
 LaTeX Info: Redefining \nameref on input line 79.
 
+<<<<<<< HEAD
 >>>>>>> 5b95587 (add exact solver and some slight beauty changes)
 >>>>>>> 50a6e87 (add exact solver and some slight beauty changes)
+=======
+>>>>>>> 438867d (add crossover and mutation to report)
 (./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
@@ -1079,11 +1070,7 @@ LaTeX Info: Redefining \nameref on input line 79.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-<<<<<<< HEAD
-\c@lstlisting=\count457
-=======
-\c@lstlisting=\count433
->>>>>>> 5b95587 (add exact solver and some slight beauty changes)
+\c@lstlisting=\count454
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 
@@ -1112,18 +1099,9 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 84.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-<<<<<<< HEAD
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./main.toc)
 \tf@toc=\write6
 \openout6 = `main.toc'.
-=======
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-
-Package hyperref Warning: old toc file detected, not used; run LaTeX again.
-
-\tf@toc=\write5
-\openout5 = `main.toc'.
->>>>>>> 5b95587 (add exact solver and some slight beauty changes)
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
@@ -1136,32 +1114,9 @@ l.95 \newpage
 =======
 l.94 \newpage
               [2]
-<<<<<<< HEAD
 
 LaTeX Warning: Citation 'Eiben2003' on page 1 undefined on input line 148.
 
-=======
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 129.
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
-een already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.135         self.
-                   parent2 = parent2 [3]pdfTeX warning (ext4): destination with
- the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.177 \subsection
-                 {Discussion} [4]pdfTeX warning (ext4): destination with the sa
-me identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.189 \newpage
-               [5]
-
-LaTeX Warning: Empty bibliography on input line 190.
->>>>>>> 5b95587 (add exact solver and some slight beauty changes)
 
 LaTeX Warning: Citation 'Back2000' on page 1 undefined on input line 148.
 
@@ -1169,18 +1124,36 @@ LaTeX Warning: Citation 'Back2000' on page 1 undefined on input line 148.
 
 LaTeX Warning: Citation 'Eiben2003' on page 2 undefined on input line 155.
 
+<<<<<<< HEAD
 [2{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [3]
 >>>>>>> 50a6e87 (add exact solver and some slight beauty changes)
 ! Missing $ inserted.
 <inserted text> 
                 $
 l.274 The best parameters were: {'population_
+=======
+[2] [3] [4]
+Overfull \hbox (6.72984pt too wide) in paragraph at lines 259--260
+\OT1/cmr/m/n/12 Both the \OT1/cmr/bx/n/12 Position-based Crossover (POS) \OT1/c
+mr/m/n/12 and \OT1/cmr/bx/n/12 Order-based Crossover (OX1)
+ []
+
+[5] [6]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.345 The best parameters were: {'population_
+>>>>>>> 438867d (add crossover and mutation to report)
                                              size': 200, 'elitism': 1, 'gene...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
+<<<<<<< HEAD
 l.274 ...tion': 'insertion', 'tournament_size': 5}
+=======
+l.345 ...tion': 'insertion', 'tournament_size': 5}
+>>>>>>> 438867d (add crossover and mutation to report)
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1191,12 +1164,27 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
+<<<<<<< HEAD
 l.275 
+=======
+l.346 
+>>>>>>> 438867d (add crossover and mutation to report)
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
+! Missing } inserted.
+<inserted text> 
+                }
+l.346 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
+<<<<<<< HEAD
 Overfull \hbox (44.86035pt too wide) in paragraph at lines 270--275
 \OT1/cmr/m/n/12 1\OML/cmm/m/it/12 ;[] generations[] \OT1/cmr/m/n/12 : 200\OML/c
 mm/m/it/12 ;[] m[]ate[] \OT1/cmr/m/n/12 : 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 1\
@@ -1216,6 +1204,18 @@ l.273 \chapter
 l.194 \chapter
 >>>>>>> 5b95587 (add exact solver and some slight beauty changes)
 >>>>>>> 50a6e87 (add exact solver and some slight beauty changes)
+=======
+
+Overfull \hbox (12.66411pt too wide) in paragraph at lines 341--346
+\OML/cmm/m/it/12 tournament[]election[];[] crossover[] \OT1/cmr/m/n/12 :[] \OML
+/cmm/m/it/12 POS[];[] mutation[] \OT1/cmr/m/n/12 :[] \OML/cmm/m/it/12 insertion
+[];[] tournament[]ize[] \OT1/cmr/m/n/12 :
+ []
+
+[7] [8]
+! Undefined control sequence.
+l.368 \chapter
+>>>>>>> 438867d (add crossover and mutation to report)
               {Appendix A}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1223,6 +1223,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 [7] (./main.aux)
 =======
@@ -1235,10 +1236,27 @@ L3 programming layer <2024-01-22>
  ***********
 <<<<<<< HEAD
 =======
+=======
+[9]
+>>>>>>> 438867d (add crossover and mutation to report)
 
+! LaTeX Error: \begin{enumerate} on input line 247 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.371 \end{document}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+(./main.aux)
 
 LaTeX Warning: There were undefined references.
 
+<<<<<<< HEAD
 =======
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
@@ -1250,13 +1268,22 @@ l.197 \end{document}
 >>>>>>> 50a6e87 (add exact solver and some slight beauty changes)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: BF7944CE013AD9BC9A8F2E5768A73C6F;3942.
+=======
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 6086074212D709D78B95D44E299AADE7;3650.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                main
+(biblatex)                and rerun LaTeX afterwards.
+
+>>>>>>> 438867d (add crossover and mutation to report)
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
-<<<<<<< HEAD
  )
 (\end occurred inside a group at level 1)
 
+<<<<<<< HEAD
 ### simple group (level 1) entered at line 274 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
@@ -1299,20 +1326,43 @@ Here is how much of TeX's memory you used:
  1289637 words of memory out of 5000000
  38776 multiletter control sequences out of 15000+600000
  475228 words of font info for 51 fonts, out of 8000000 for 9000
+=======
+### semi simple group (level 1) entered at line 247 (\begingroup)
+### bottom level 
+Here is how much of TeX's memory you used:
+ 31077 strings out of 480171
+ 580498 string characters out of 5894489
+ 1245413 words of memory out of 5000000
+ 48528 multiletter control sequences out of 15000+600000
+ 480091 words of font info for 69 fonts, out of 8000000 for 9000
+>>>>>>> 438867d (add crossover and mutation to report)
  59 hyphenation exceptions out of 8191
- 60i,7n,68p,737b,2018s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (6 pages, 92900 bytes).
+ 84i,8n,80p,890b,1363s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/danimacsai/.texlive2021/texmf-var/fonts/pk/ljfour/jknap
+pen/ec/tcrm1200.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmtt12.pfb>
+Output written on main.pdf (11 pages, 160456 bytes).
 PDF statistics:
+<<<<<<< HEAD
  192 PDF objects out of 1000 (max. 8388607)
  170 compressed objects within 2 object streams
  61 named destinations out of 1000 (max. 500000)
  161 words of extra memory for PDF output out of 10000 (max. 10000000)
 >>>>>>> 5b95587 (add exact solver and some slight beauty changes)
 >>>>>>> 50a6e87 (add exact solver and some slight beauty changes)
+=======
+ 312 PDF objects out of 1000 (max. 8388607)
+ 273 compressed objects within 3 object streams
+ 76 named destinations out of 1000 (max. 500000)
+ 221 words of extra memory for PDF output out of 10000 (max. 10000000)
+>>>>>>> 438867d (add crossover and mutation to report)
 

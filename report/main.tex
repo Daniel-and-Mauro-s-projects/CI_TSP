@@ -176,17 +176,112 @@ Parent selection is a crucial step in the genetic algorithm, as it determines th
 \end{itemize}
 
 
-\subsection{Crossover techniques}
-TODO:Describe the POS operator, its implementation, and its role in the genetic algorithm.
-/cite{Larranaga1999}
+\subsection{Crossover Techniques}
+
+In genetic algorithms, crossover operators play a crucial role in combining the genetic information of two parent solutions to produce offspring. These techniques simulate the natural process of reproduction, where the genetic material of two parents is mixed to create offspring that inherit traits from both parents. The goal of the crossover operator is to generate new solutions that inherit the best features of the parents while maintaining diversity in the population. In this section, we describe two widely used crossover operators: the \textbf{Position-based Crossover (POS)} and \textbf{Order-based Crossover (OX1)} operators as these had the best result in \cite{Larranaga1999}.
+
+\subsubsection{Position-based Crossover (POS)}
+
+The \textbf{Position-based Crossover} (POS) operator is particularly useful when dealing with permutation-based problems, such as the \textbf{Traveling Salesman Problem (TSP)} or other problems where the solution involves a sequence of items or locations. In POS, the crossover is performed by selecting specific positions (or indices) from the parent chromosomes and transferring them to the offspring.
+
+\paragraph{Implementation of POS Crossover:}
+
+\begin{enumerate}
+    \item \textbf{Input:} Two parent solutions, \texttt{Parent1} and \texttt{Parent2}, both represented as permutations of the same set of elements (e.g., cities in the TSP).
+    \item \textbf{Process:}
+    \begin{itemize}
+        \item Randomly select a subset of positions (indices) from \texttt{Parent1}. These positions will be inherited by the offspring.
+        \item Copy the elements from \texttt{Parent1} at the selected positions to the corresponding positions in the offspring.
+        \item For the remaining positions, fill them with the elements from \texttt{Parent2}, ensuring that no element is repeated. This is done by copying the elements of \texttt{Parent2} that do not already exist in the offspring.
+        \item We then repeat this process for the second offspring by swapping the roles of \texttt{Parent1} and \texttt{Parent2}.
+    \end{itemize}
+\end{enumerate}
+
+\paragraph{Example:}
+
+Suppose we have the following parents:
+\[
+\text{Parent1:} \ [4, 1, 3, 5, 2]
+\quad \text{and} \quad \text{Parent2:} \ [2, 4, 1, 3, 5]
+\]
+
+A possible crossover operation could be:
+
+\begin{enumerate}
+    \item Randomly select a subset of positions from \texttt{Parent1}. For example, positions 1 and 3 (the corresponding elements are [4, 3]).
+    \item Copy the elements at the selected positions from \texttt{Parent1} to the offspring. Now the partially filled offspring looks like this: \ [4, \_, 3, \_, \_].
+    \item Fill the remaining positions with the elements from \texttt{Parent2} that are not already present in the offspring.
+    \item Final \texttt{Offspring 1:} \ [4, 2, 3, 1, 5].
+    \item For the second offspring, we use the same positions, the coresponing elements are [2, 1], so the offspring will look like this: \ [2, \_, 1, \_, \_].
+    \item After filling it in from \texttt{Parent 1}, we end up with the final \texttt{Offspring 2:} \ [2, 4, 1, 3, 5].
+\end{enumerate}
+
+
+
+\paragraph{Role in Genetic Algorithm:}
+
+POS crossover ensures that the offspring inherits a specific order of cities from \texttt{Parent1} while incorporating diversity by filling the remaining positions from \texttt{Parent2}. This technique is particularly effective for permutation-based problems as it preserves the relative ordering of elements while allowing diversity in the offspring population.
+
+\subsubsection{Order-based Crossover (OX1)}
+
+The \textbf{Order-based Crossover (OX1)} operator is another permutation-based crossover technique often used for solving combinatorial optimization problems. It is designed to preserve the relative ordering of elements from the parents while preventing duplicates in the offspring. OX1 works by selecting a subsequence of elements from one parent and then copying the remaining elements from the other parent in the same order they appear.
+
+\paragraph{Implementation of OX1 Crossover:}
+
+\begin{enumerate}
+    \item \textbf{Input:} Two parent solutions, \texttt{Parent1} and \texttt{Parent2}, both represented as permutations.
+    \item \textbf{Process:}
+    \begin{itemize}
+        \item Randomly select a subsequence of elements from \texttt{Parent1}. This subsequence will be retained in the offspring.
+        \item For the remaining positions, copy the elements from \texttt{Parent2} in the order they appear, while ensuring that no element is duplicated in the offspring. This can be done by skipping over any element that is already present in the offspring.
+        \item The second offspring is generated by swapping the roles of \texttt{Parent1} and \texttt{Parent2}, i.e., selecting a subsequence from \texttt{Parent2} and filling in the remaining positions with elements from \texttt{Parent1}.
+    \end{itemize}
+\end{enumerate}
+
+\paragraph{Example:}
+
+Given the parents:
+\[
+\text{Parent1:} \ [4, 1, 3, 5, 2]
+\quad \text{and} \quad \text{Parent2:} \ [2, 4, 1, 3, 5]
+\]
+
+Suppose we randomly select a subsequence from \texttt{Parent1}, such as positions 2 to 4 (i.e., [1, 3, 5]). Now, the offspring will look like this:
+
+\begin{enumerate}
+    \item \texttt{Offspring 1(partially filled):} \ [\_, 1, 3, 5, \_] (copy positions 2 to 4 from \texttt{Parent1}).
+    \item Copy the remaining elements from \texttt{Parent2} that are not yet in the offspring. The remaining elements from \texttt{Parent2} are [2, 4], which will fill the empty slots.
+    \item Final \texttt{Offspring 1:} \ [2, 1, 3, 5, 4].
+    \item For the second offspring, we select the same positions as before, the corresponding elements are [4, 1, 3], so the offspring will look like this: \ [\_, 4, 1, 3, \_], and after filling it, the final \texttt{Offspring 2} is \ [5, 4, 1, 3, 2].
+
+\paragraph{Role in Genetic Algorithm:}
+
+The \textbf{OX1 crossover} is particularly effective in maintaining the order of cities in the offspring, which is critical for problems like the TSP where the relative order of cities is important. By ensuring no duplicates and preserving order, OX1 allows for the effective exploration of the solution space while retaining useful genetic material from both parents. This leads to higher-quality offspring in the evolutionary process.
+
+\subsubsection{Summary}
+
+Both the \textbf{Position-based Crossover (POS)} and \textbf{Order-based Crossover (OX1)} operators are essential tools in solving permutation-based optimization problems like the TSP. These operators ensure that the offspring inherit useful traits from their parents while maintaining diversity and preventing duplicates. The role of these crossover techniques in a genetic algorithm is to generate high-quality solutions by combining the best features of the parent solutions and driving the algorithm towards the optimal solution. We see that basically the POS operator is a more general version of the OX1 operator, as it allows for more flexibility in the selection of the subsequence to be inherited from the first parent. At this point it is not clear if allowing more generality will result in better solutions or not, we will have to test it.
 
 \subsection{Mutation Operators}
-The mutation operator is a crucial part of the genetic algorithm, as it introduces diversity into the population. For reference, we checked \cite{Larranaga1999}. In the end, in our implementation, we used the following mutation operators:
+The mutation operator is a crucial part of the genetic algorithm, as it introduces diversity into the population. For further details, we referred to \cite{Larranaga1999}. In the end, in our implementation, we used the following mutation operators:
+
 \begin{itemize}
-    \item Exchange mutation: two random cities are arbitrarily swapped in the chromosome
-    \item Insertion mutation: a random city is removed and reinserted at another random position in the chromosome
-    \item TODO: Inversion mutation: a subset of the chromosome is reversed
+    \item \textbf{Exchange mutation}: two random cities are arbitrarily swapped in the chromosome
+    \item \textbf{Insertion mutation}: a random city is removed and reinserted at another random position in the chromosom
+    \item \textbf{Inversion Mutation (IVM)}: A subset of the chromosome (i.e., a segment of the tour) is reversed. This mutation is effective in localizing improvements by reversing part of the tour, which may reduce the total travel distance. The \textbf{Inversion Mutation Algorithm (IVM)} follows these steps:
+    
+    \begin{enumerate}
+        \item \textbf{Select the random subset}: Two indices, $i$ and $j$, are selected randomly such that $i < j$. These indices define the boundaries of the subset to be inverted. We now remove this subset, and reverse it. 
+        
+        \item \textbf{Replace the original segment}: The reversed segment is placed back into the chromosome into a randomly chosen position. 
+    \end{enumerate}
+
+    \noindent This mutation operator is effective in the \textbf{Travelling Salesman Problem (TSP)} because it can significantly alter the tour by reversing part of the path, which could potentially reduce the total travel distance. It is particularly useful when the cities in the selected subset are in an order that is suboptimal, as reversing them can yield better results.
 \end{itemize}
+
+
+Each of these mutation techniques introduces diversity into the population, ensuring that the genetic algorithm does not get stuck in local optima and can continue to evolve towards better solutions.
+
 
 \subsection{Elitism}
 Elitism is a mechanism that ensures that the best individuals from the current population are passed on to the next generation. This helps maintain the best solutions found so far and prevents the degradation of chromosome quality. In our implementation, we considered GA configurations without elitism and with elitism, both keeping the best individual and the three best individuals from the previous generation.
