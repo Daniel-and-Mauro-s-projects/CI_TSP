@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.24)  9 NOV 2024 18:14
 =======
 <<<<<<< HEAD
@@ -11,6 +12,9 @@ This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (prel
 =======
 This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.11.1)  9 NOV 2024 18:43
 >>>>>>> 438867d (add crossover and mutation to report)
+=======
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.24)  9 NOV 2024 18:57
+>>>>>>> 18ae3d9 (genetic algorithm class, crossover class, hyperparameter explanation, annex)
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1111,6 +1115,7 @@ een already used, duplicate ignored
 l.95 \newpage
               [2] [1] [2{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1
 .enc}] [3] [4]
+<<<<<<< HEAD
 =======
 l.94 \newpage
               [2]
@@ -1144,16 +1149,33 @@ mr/m/n/12 and \OT1/cmr/bx/n/12 Order-based Crossover (OX1)
                 $
 l.345 The best parameters were: {'population_
 >>>>>>> 438867d (add crossover and mutation to report)
+=======
+Overfull \hbox (17.09363pt too wide) in paragraph at lines 254--255
+\OT1/cmr/m/n/12 The core of our im-ple-men-ta-tion is the \OT1/cmr/m/it/12 tsp[
+]genetic.py \OT1/cmr/m/n/12 mod-ule, which con-tains the \OT1/cmr/m/it/12 TSP[]
+Genetic
+ []
+
+[5]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.283 The best parameters were: {'population_
+>>>>>>> 18ae3d9 (genetic algorithm class, crossover class, hyperparameter explanation, annex)
                                              size': 200, 'elitism': 1, 'gene...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
 <<<<<<< HEAD
+<<<<<<< HEAD
 l.274 ...tion': 'insertion', 'tournament_size': 5}
 =======
 l.345 ...tion': 'insertion', 'tournament_size': 5}
 >>>>>>> 438867d (add crossover and mutation to report)
+=======
+l.283 ...tion': 'insertion', 'tournament_size': 5}
+>>>>>>> 18ae3d9 (genetic algorithm class, crossover class, hyperparameter explanation, annex)
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1165,10 +1187,14 @@ deleted material, e.g., by typing `I$}'.
 <inserted text> 
                 $
 <<<<<<< HEAD
+<<<<<<< HEAD
 l.275 
 =======
 l.346 
 >>>>>>> 438867d (add crossover and mutation to report)
+=======
+l.284 
+>>>>>>> 18ae3d9 (genetic algorithm class, crossover class, hyperparameter explanation, annex)
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1185,7 +1211,11 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Overfull \hbox (44.86035pt too wide) in paragraph at lines 270--275
+=======
+Overfull \hbox (44.86035pt too wide) in paragraph at lines 279--284
+>>>>>>> 18ae3d9 (genetic algorithm class, crossover class, hyperparameter explanation, annex)
 \OT1/cmr/m/n/12 1\OML/cmm/m/it/12 ;[] generations[] \OT1/cmr/m/n/12 : 200\OML/c
 mm/m/it/12 ;[] m[]ate[] \OT1/cmr/m/n/12 : 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 1\
 OML/cmm/m/it/12 ;[] c[]ate[] \OT1/cmr/m/n/12 : 1\OML/cmm/m/it/12 ;[] select[]ar
@@ -1193,6 +1223,7 @@ ents[] \OT1/cmr/m/n/12 :[] \OML/cmm/m/it/12 tournament[]election[];[] crossover
 [] \OT1/cmr/m/n/12 :[]
  []
 
+<<<<<<< HEAD
 [5] [6]
 ! Undefined control sequence.
 <<<<<<< HEAD
@@ -1230,6 +1261,9 @@ and I'll forget about whatever was undefined.
 <<<<<<< HEAD
 [6] (./main.aux)
 >>>>>>> 50a6e87 (add exact solver and some slight beauty changes)
+=======
+[6] [7] [8] (./main.aux)
+>>>>>>> 18ae3d9 (genetic algorithm class, crossover class, hyperparameter explanation, annex)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -1267,6 +1301,7 @@ l.197 \end{document}
 >>>>>>> 5b95587 (add exact solver and some slight beauty changes)
 >>>>>>> 50a6e87 (add exact solver and some slight beauty changes)
 Package rerunfilecheck Info: File `main.out' has not changed.
+<<<<<<< HEAD
 (rerunfilecheck)             Checksum: BF7944CE013AD9BC9A8F2E5768A73C6F;3942.
 =======
 Package rerunfilecheck Info: File `main.out' has not changed.
@@ -1277,6 +1312,9 @@ Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                and rerun LaTeX afterwards.
 
 >>>>>>> 438867d (add crossover and mutation to report)
+=======
+(rerunfilecheck)             Checksum: E2FCED76A84ADAB4FDD257835B0B5B70;4283.
+>>>>>>> 18ae3d9 (genetic algorithm class, crossover class, hyperparameter explanation, annex)
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
@@ -1284,16 +1322,20 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 (\end occurred inside a group at level 1)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ### simple group (level 1) entered at line 274 ({)
+=======
+### simple group (level 1) entered at line 283 ({)
+>>>>>>> 18ae3d9 (genetic algorithm class, crossover class, hyperparameter explanation, annex)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 31114 strings out of 474222
- 579341 string characters out of 5748732
- 1935975 words of memory out of 5000000
- 52902 multiletter control sequences out of 15000+600000
+ 31122 strings out of 474222
+ 579470 string characters out of 5748732
+ 1936975 words of memory out of 5000000
+ 52907 multiletter control sequences out of 15000+600000
  568901 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,8n,87p,815b,1316s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,8n,87p,815b,1318s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
@@ -1306,8 +1348,9 @@ ts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm120
 0.pfb>
-Output written on main.pdf (9 pages, 165335 bytes).
+Output written on main.pdf (10 pages, 171616 bytes).
 PDF statistics:
+<<<<<<< HEAD
 <<<<<<< HEAD
  298 PDF objects out of 1000 (max. 8388607)
  260 compressed objects within 3 object streams
@@ -1365,4 +1408,10 @@ PDF statistics:
  76 named destinations out of 1000 (max. 500000)
  221 words of extra memory for PDF output out of 10000 (max. 10000000)
 >>>>>>> 438867d (add crossover and mutation to report)
+=======
+ 315 PDF objects out of 1000 (max. 8388607)
+ 276 compressed objects within 3 object streams
+ 59 named destinations out of 1000 (max. 500000)
+ 253 words of extra memory for PDF output out of 10000 (max. 10000000)
+>>>>>>> 18ae3d9 (genetic algorithm class, crossover class, hyperparameter explanation, annex)
 

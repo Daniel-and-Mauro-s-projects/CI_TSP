@@ -103,9 +103,6 @@
 \section{Introduction}
 The Traveling Salesman Problem (TSP) is a classic combinatorial optimization problem that has been extensively studied in the field of mathematics and computer science. The problem is defined as follows: given a set of cities and the distances between them, the goal is to find the shortest possible route that visits each city exactly once and returns to the starting city. The TSP is an NP-hard problem, meaning that there is no known polynomial-time algorithm that can solve it exactly for all instances. In this sense, algorithms such us Genetic Algorithms (GAs) have been proposed as a way to find approximate solutions to the TSP.
 
-\subsection{Dataset}
-In this work, we consider a dataset of 29 cities from Bavaria, Germany. The dataset contains the coordinates of each city, as well as the distances between them (provided in a distance matrix). The dataset (called \textit{bays29.tsp}) is available at the following link: \url{http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/tsp/}
-
 
 \subsection{Background}
 TODO: Provide background information on the topic, including relevant literature and the motivation behind the project.
@@ -308,7 +305,10 @@ TODO: Write about some options and the reasons why we didn't use them. (computat
 
 % Implementation
 \section{Implementation}
-\subsection{Environment Setup}
+\subsection{Dataset}
+In this work, we consider a dataset of 29 cities from Bavaria, Germany. The dataset contains the coordinates of each city, as well as the distances between them (provided in a distance matrix). The dataset (called \textit{bays29.tsp}) is available at the following link: \url{http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/tsp/}
+
+\subsection{Code Structure}
 One of our main goals, was to create a flexible and modular implementation that allows for easy experimentation with different configurations and operators. To achieve this, we used Python as the main programming language, and we implemented the parent-selection methods, crossover operators, and mutation operators as separate modules. This design allows us to easily swap out different operators and configurations without changing the core logic of the genetic algorithm. Aside from this, the class that contains the genetic algorithm is also modular, allowing for easy extension and modification. All of these files, can be found in the \textit{src} folder of the project.
 
 Another clear target of ours, was to code (almost) everything from scratch. For this reason, we only used the following libraries:
@@ -323,9 +323,7 @@ Another clear target of ours, was to code (almost) everything from scratch. For 
     \item \textit{pandas} to deal with the results in a more structured way for the analysis
 \end{enumerate}
 
-To use all of these modules, we set up a jupyter notebook file \textit{tsp.ipynb} that contains the data reading function, the grid search function and most graph plotting cells. In this notebook, we also wrote a \textit{Usage Example} section, where we show how to use the genetic algorithm class and all of its parameters, although if more insight is needed, all the functions and classes are documented in their respective docstrings.
-
-\subsection{Code Structure}
+To use all of these modules, we set up a jupyter notebook file \textit{tsp.ipynb} that contains the data reading function, the grid search function and most graph plotting cells (see \ref{fig:code_structure}). In this notebook, we also wrote a \textit{Usage Example} section, where we show how to use the genetic algorithm class and all of its parameters, although if more insight is needed, all the functions and classes are documented in their respective docstrings.
 
 \begin{figure}
     \centering
@@ -347,13 +345,24 @@ To use all of these modules, we set up a jupyter notebook file \textit{tsp.ipynb
     \label{fig:code_structure}
 \end{figure}
 
+\subsubsection{Genetic Algorithm Class}
+The core of our implementation is the \textit{tsp\_genetic.py} module, which contains the \textit{TSP\_Genetic} class. This class is responsible for running the genetic algorithm, given a set of parameters and operators. The class contains the following methods:
+\begin{itemize}
+    \item \textbf{\_\_init\_\_}: Initializes the genetic algorithm with the given hyperparameters. To see them, check \ref{annex:initparameters}.
+    \item \textbf{run}: Runs the genetic algorithm for the specified initial population, cities and matrix of distances. \ref{annex:runparameters}
+    \item \textbf{\_path\_distance}: Given a chromosome provides the total path distance.
+    \item \textbf{path\_distance\_population}: Given a population, returns an array with the total path distance of each chromosome.
+    \item \textbf{plot\_route}: Given a chromosome, plots its route.
+\end{itemize}
 
-Provide an overview of the code structure, including key modules and their functionalities. 
-
-\subsection{Key Algorithms}
-Include code snippets and explanations of the core algorithms implemented. 
-
-\subsubsection{Position-Based Crossover}
+\subsubsection{Crossover Class}
+The \textit{crossover.py} module contains the \textit{Crossover} class, which is responsible for implementing the crossover operators. The class contains the following methods:
+\begin{itemize}
+    \item \textbf{POS}
+    \item \textbf{OX1}
+\end{itemize}
+Each of the methods were coded so they could be tuned via hyperparameters, that can be introduced in the \textit{\_\_init\_\_} method of the class using the \textit{crossover\_call} parameter. For example, if we intend to use the "OX1" operator, setting its first and second cut value to the 4th positions counting from each end, we would introduce in the \textit{TSP\_Genetic} instantiation: \textit{crossover\_call = "(4, cities.shape[0] - 4)"}.
+    
 
 
 % Results
@@ -389,7 +398,45 @@ Suggest potential areas for future research or improvements.
 
 % Appendix
 \appendix
-\chapter{Appendix A}
-Include any supplementary material, such as additional code or data.
-
+\section{Appendix: Hyperparameters}
+\label{annex:parameters}
+\subsection{\_\_init\_\_ Parameters}
+\label{annex:initparameters}
+\begin{itemize}
+    \item \textbf{generations}: Number of generations to simulate.
+    \item \textbf{print\_results}: Whether to print algorithm results.
+    \item \textbf{print\_rate}: Frequency of progress printing.
+    \item \textbf{m\_rate}: Mutation rate, probability of mutation in offspring.
+    \item \textbf{c\_rate}: Crossover rate, probability of crossover between parent chromosomes..
+    \item \textbf{select\_parents}: Parent selection method.
+        \begin{itemize}
+            \item \textbf{random\_selection}
+            \item \textbf{roulette\_selection}
+            \item \textbf{rank\_roulette\_selection}
+            \item \textbf{tournament\_selection}
+        \end{itemize}
+    \item \textbf{tournament\_size}: Tournament size (just for tournament selection).
+    \item \textbf{crossover}: Crossover method for parent chromosomes.
+        \begin{itemize}
+            \item \textbf{POS}
+            \item \textbf{OX1}
+        \end{itemize}
+    \item \textbf{crossover\_call}: Arguments for the crossover method.
+    \item \textbf{mutation}: Mutation method for offspring chromosomes.
+        \begin{itemize}
+            \item \textbf{exchange}
+            \item \textbf{insertion}
+            \item \textbf{IVM}
+        \end{itemize}
+    \item \textbf{elitism}: Number of best chromosomes retained in the next generation.
+    \item \textbf{results\_path}: Path to save path\_distance statistics.
+    \item \textbf{save\_results}: Save path\_distance statistics to a file.
+\end{itemize}
+\subsection{run Parameters}
+\label{annex:runparameters}
+\begin{itemize}
+    \item \textbf{population}: Chromosomes in the initial population.
+    \item \textbf{cities}: Matrix with the $(x,y)$ coordinates of each city.
+    \item \textbf{distances}: Matrix of distances between cities.
+\end{itemize}
 \end{document}
