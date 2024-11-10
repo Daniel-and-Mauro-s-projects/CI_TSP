@@ -434,6 +434,7 @@ The results shown on the second graph are not so conclusive. Based on the option
 In the case of the crossover rate, the results are even less decisive. All the options provide similar results, although the one present in the best configuration is crossover rate 1. This is not what we expected, as in the GA section of \cite{Eiben2003} it states that a common recommendation is to use a crossover rate between 0.6 and 0.8. We could assess this to the fact that we are not performing a canonical GA, but either way, the difference is not dramatic. 
 
 \begin{figure}[H]
+    \centering
     \includegraphics[width=\textwidth]{../results/parent_selection_method_boxplot.png}
     \label{fig:parent_selection}
 \end{figure}
@@ -441,6 +442,7 @@ In the case of the crossover rate, the results are even less decisive. All the o
 The graph regarding parent selection methods is the one with most options and offers a lot of insight. In the first place, we see a big gap in performance between the random selection method and the other three, as expected. On the other hand, we see a non-negligible difference between rank-roulette and normal roulette selection. The better performance of roulette selection could be due to it being more sensible to distance variation than rank-roulette selection. Finally, we notice that both tournament selection set-ups are better, in terms of median and standard deviation, than the other methods, having even better results with tournament size 5 instead of 3. This surprised us at first, and we still don't have a clear explanation for it. Tournament selection also mimics in a more faithful way the real world as it follows some sort of survival of the fittest.
 
 \begin{figure}[H]
+    \centering
     \includegraphics[width=0.8\textwidth]{../results/elitism_boxplot.png}
     \label{fig:elitism}
 \end{figure}
