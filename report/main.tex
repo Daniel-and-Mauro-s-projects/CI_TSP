@@ -91,7 +91,7 @@
 % Abstract
 \begin{abstract}
     \noindent
-    This paper presents a genetic algorithm approach to solve the Traveling Salesman Problem (TSP). The implementation focuses on key aspects of genetic algorithms, including problem representation, parent selection methods (tournament, roulette, rank-based, and random), crossover techniques (Position-based Crossover and Order-based Crossover), and mutation operators (exchange, insertion, and inversion). The algorithm was evaluated on a standard TSP dataset (bays29.tsp) using a grid search to optimize hyperparameters. The results show the effectiveness of the genetic algorithm in finding near-optimal solutions to the TSP, with a best solution within 1.73\% of the optimal known solution. The analysis of hyperparameters reveals the importance of elitism, number of generations and individuals and the robustness of the algorithm to different crossover and mutation techniques, as well as the great performance of tournament selection. 
+    This paper presents a genetic algorithm approach to solve the Traveling Salesman Problem (TSP). The implementation focuses on key aspects of genetic algorithms, including problem representation, parent selection methods (tournament, roulette, rank-based, and random), crossover techniques (POS and OX1), and mutation operators (exchange, insertion, and IVM). The algorithm was evaluated on a standard TSP dataset (bays29.tsp) using a grid search to optimize hyperparameters. The results show the effectiveness of the genetic algorithm in finding near-optimal solutions to the TSP, with a best solution within 1.73\% of the optimal known solution. The analysis of hyperparameters reveals the importance of elitism, number of generations and individuals and the robustness of the algorithm to different crossover and mutation techniques, as well as the great performance of tournament selection. 
 \end{abstract}
 
 \newpage
@@ -116,7 +116,7 @@ The primary objective of this research is to investigate the effectiveness of Ge
     \item \textbf{Experiment} with different genetic operators (crossover and mutation) and parent selection methods.
     \item \textbf{Tune} hyperparameters to optimize the GA's performance.
     \item \textbf{Evaluate} the performance of the GA on a benchmark TSP dataset.
-    \item \textbf{Analyze} the impact of different parameter configurations on the solution quality and computational cost.
+    \item \textbf{Analyze} the impact of different parameter configurations on the solution quality.
 \end{enumerate}
 
 \subsection{Scope}
@@ -331,7 +331,7 @@ In this work, we consider a dataset of 29 cities from Bavaria, Germany. The data
 \subsection{Code Structure}
 One of our main goals, was to create a flexible and modular implementation that allows for easy experimentation with different configurations and operators. To achieve this, we used Python as the main programming language, and we implemented the parent-selection methods, crossover operators, and mutation operators as separate modules. This design allows us to easily swap out different operators and configurations without changing the core logic of the genetic algorithm. Aside from this, the class that contains the genetic algorithm is also modular, allowing for easy extension and modification. All of these files, can be found in the \textit{src} folder of the project.
 
-Another clear target of ours, was to code (almost) everything from scratch. For this reason, we only used the following libraries: numpy, random, matplotlib, typing, logging, json, datetime, and pandas.
+Another clear target of ours, was to code (almost) everything from scratch. For this reason, we only used the following libraries: numpy, random, matplotlib, typing, logging, json, datetime and pandas.
 % \begin{enumerate}
 %     \item \textit{numpy} for numerical operations and efficiency
 %     \item \textit{random} for random number generation
