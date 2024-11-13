@@ -1,7 +1,7 @@
 # CI_TSP
 Genetic Algorithms+TSP
 
-\textbf{For better explanation of both the repository and the project see Report.pdf}
+(For better explanation of both the repository and the project see Report.pdf)
 
 One of our main goals was to create a flexible and modular implementation that allows for easy experimentation with different configurations and operators. To achieve this, we used Python as the main programming language, and we implemented the parent-selection methods, crossover operators, and mutation operators as separate modules. This design allows us to easily swap out different operators and configurations without changing the core logic of the genetic algorithm. Aside from this, the class that contains the genetic algorithm is also modular, allowing for easy extension and modification. All of these files can be found in the src folder of the project.
 
